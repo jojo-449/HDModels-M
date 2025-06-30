@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f994db;
+    position: fixed;
+}
+
+.video video{
+position: absolute;
+width: 1200px;
+transform: translateY(-260px) translateX(33px);
+height: 190vh;
+z-index: -1;
+object-fit: contain;            
+}
+
+button{
+    white-space: nowrap;
+    width: 160px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 20px;
+    color: black;
+    background-color: rgb(221, 190, 250);
+    text-decoration: none;
+}
+
+
+/* Navigation */
+.navbar {
+    background: rgba(43, 1, 43, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(248, 183, 192, 0.5);
+    padding: 0;
+    height: 50px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #faf9f9;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #9d174d;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.nav-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: #be185d;
+}
+
+.nav-icons a {
+    text-decoration: none;
+}
+
+/* Homepage Container */
+.homepage-container {
+    position: relative;
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}

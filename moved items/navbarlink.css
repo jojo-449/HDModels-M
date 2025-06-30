@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links{
+    background-image: url(https://i.pinimg.com/736x/5f/02/2d/5f022d9a095ec3271ac2bf278fffa7fc.jpg);
+    display: flex;
+    white-space: nowrap;
+    height: 50px;
+    gap: 105px;
+    padding-left: 260px;
+    text-align: center;
+    align-items: center;
+}
+
+.nav-links a{
+    text-decoration: none;
+}

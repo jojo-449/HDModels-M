@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Premium Models - HDMODELS Fashion Agency</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-links">
+                     <a href="home.html" class="nav-link">HOME-PAGE</a>
+                    <a href="models.html" class="nav-link">MODEL</a>
+                    <a href="booking-history.html" class="nav-link">BOOKINGS</a>
+                    <a href="about.html" class="nav-link">ABOUT US</a>
+                    <a href="model-enquiry.html" class="nav-link">MODEL ENQUIRY</a>
+                    <a href="terms.html" class="nav-link">TERMS & CONDITIONS</a>
+                </div>
+                <div class="nav-icons">
+                     <a href="login copy.html" class="nav-icon">👤</a>
+                    <a href="booking-history.html" class="nav-icon">📋</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Model Category Header -->
+        <div class="model-category-header">
+            <h1>Premium Models</h1>
+            <p>High-end professional models for luxury campaigns - Starting at ₦200,000</p>
+        </div>
+
+        <!-- Model Gallery -->
+        <div class="model-gallery-container">
+            <div class="model-gallery" id="premiumModelGallery">
+                <!-- Gallery will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Model Details Modal -->
+        <div id="modelDetailsModal" class="model-modal" style="display: none;">
+            <div class="model-modal-content">
+                <span class="model-modal-close" onclick="closeModelModal()">&times;</span>
+                <div class="model-details-content">
+                    <div class="model-image-container">
+                        <img id="modalModelImage" src="" alt="Model Photo" class="modal-model-image">
+                    </div>
+                    <div class="model-info-container">
+                        <h3 id="modalModelName">Model Name</h3>
+                        <div class="model-measurements">
+                            <h4>Measurements</h4>
+                            <div class="measurement-grid">
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Height:</span>
+                                    <span id="modalHeight" class="measurement-value">5'7"</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Size:</span>
+                                    <span id="modalSize" class="measurement-value">M</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Bust:</span>
+                                    <span id="modalBust" class="measurement-value">34"</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Waist:</span>
+                                    <span id="modalWaist" class="measurement-value">26"</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Hips:</span>
+                                    <span id="modalHips" class="measurement-value">36"</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Shoe Size:</span>
+                                    <span id="modalShoeSize" class="measurement-value">7</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Hair Color:</span>
+                                    <span id="modalHairColor" class="measurement-value">Black</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="model-shoot-types">
+                            <h4>Available Shoot Types</h4>
+                            <div id="modalShootTypes" class="shoot-types-list">
+                                <!-- Shoot types will be populated -->
+                            </div>
+                        </div>
+                        <div class="model-availability">
+                            <div class="availability-item">
+                                <span class="availability-label">Last Updated:</span>
+                                <span id="modalDate" class="availability-value">Dec 15, 2024</span>
+                            </div>
+                            <div class="availability-item">
+                                <span class="availability-label">Available Time:</span>
+                                <span id="modalTime" class="availability-value">9:00 AM - 6:00 PM</span>
+                            </div>
+                        </div>
+                        <button class="book-model-btn" onclick="bookThisModel()">Book This Model</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script (1).js"></script>
+    </body>
+</html>

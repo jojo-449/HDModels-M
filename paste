@@ -1,0 +1,148 @@
+
+                <!-- Shooting Preferences -->
+                <div style="margin-bottom: 32px;">
+                    <h4 style="color: #be185d; margin-bottom: 16px; border-bottom: 2px solid #be185d; padding-bottom: 8px;">Shooting Preferences</h4>
+                    <div class="form-group">
+                        <label class="form-label">Type of Shoots Interested In * (Select all that apply)</label>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 8px;">
+                            <label style="display: flex; align-items: center; gap: 8px;">
+                                <input type="checkbox" name="shootTypes" value="Bridal Shoot"> Bridal Shoot
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px;">
+                                <input type="checkbox" name="shootTypes" value="Beauty Shoot"> Beauty Shoot
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px;">
+                                <input type="checkbox" name="shootTypes" value="Skincare Shoot"> Skincare Shoot
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px;">
+                                <input type="checkbox" name="shootTypes" value="Fashion Shoot"> Fashion Shoot
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px;">
+                                <input type="checkbox" name="shootTypes" value="Lingerie Shoot"> Lingerie Shoot
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px;">
+                                <input type="checkbox" name="shootTypes" value="Video Vixen"> Video Vixen
+                            </label>
+                        </div>
+                    </div>
+                 // Get selected shoot types
+    const shootTypes = [];
+    const shootTypeCheckboxes = document.querySelectorAll('input[name="shootTypes"]:checked');
+    shootTypeCheckboxes.forEach(checkbox => {
+        shootTypes.push(checkbox.value);
+    });
+
+    nav-links{
+   
+    display: flex;
+    white-space: nowrap;
+    height: 50px;
+    gap: 105px;
+    padding-left: 260px;
+    text-align: center;
+    align-items: center;
+}
+
+.nav-links li a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav-bar{
+    background-color: rgb(253, 218, 240);
+    height: 70px;
+}
+
+h1{
+    text-align: center;
+    transform: translateY(20px);
+}
+
+.Text{
+    background-image: url(https://i.pinimg.com/736x/02/db/65/02db65127ea7b2195d7221a73fbab02a.jpg);
+    text-align: center;
+    transform: translateX(290px) translateY(25px);
+    font-size: 20px;
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px;
+}
+
+h2{
+    transform: translateY(60px) translateX(475px);
+}
+
+// Get selected shoot types
+    const shootTypes = [];
+    const shootTypeCheckboxes = document.querySelectorAll('input[name="shootTypes"]:checked');
+    shootTypeCheckboxes.forEach(checkbox => {
+        shootTypes.push(checkbox.value);
+    });
+    
+
+    // Price calculator
+function calculatePrice(category, duration) {
+    const pricing = {
+        'basic': { min: 15000, max: 25000 },
+        'top': { min: 30000, max: 45000 },
+        'featured': { min: 50000, max: 70000 },
+        'premium': { min: 75000, max: 100000 }
+    };
+
+
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-bottom: 16px;">
+                    <div class="form-group">
+                        <label class="form-label">Model Category</label>
+                        <select id="modelCategory" class="form-input" required>
+                            <option value="">Select category</option>
+                            <option value="basic">Basic Models</option>
+                            <option value="top">Top Models</option>
+                            <option value="featured">Featured Models</option>
+                            <option value="premium">Premium Models</option>
+                        </select>
+                    </div>
+
+
+
+
+
+
+                     <div class="model-info-container">
+                        <h3 id="modalModelName">Model Name</h3>
+                        <div class="model-measurements">
+                            <h4>Measurements</h4>
+                            <div class="measurement-grid">
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Height:</span>
+                                    <span id="modalHeight" class="measurement-value">5'7"</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Size:</span>
+                                    <span id="modalSize" class="measurement-value">M</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Bust:</span>
+                                    <span id="modalBust" class="measurement-value">34"</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Waist:</span>
+                                    <span id="modalWaist" class="measurement-value">26"</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Hips:</span>
+                                    <span id="modalHips" class="measurement-value">36"</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Shoe Size:</span>
+                                    <span id="modalShoeSize" class="measurement-value">7</span>
+                                </div>
+                                <div class="measurement-item">
+                                    <span class="measurement-label">Hair Color:</span>
+                                    <span id="modalHairColor" class="measurement-value">Black</span>
+                                </div>
+                            </div>
+
+
+                             <p><strong>Interested in:</strong> ${applicationData.shootTypes?.join(', ') || 'Not specified'}</p>
+        </div>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings - HDMODELS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">HOME-PAGE</a>
+                <a href="models.html" class="nav-link">MODEL</a>
+                <a href="bookings.html" class="nav-link active">BOOKINGS</a>
+                <a href="about.html" class="nav-link">ABOUT US</a>
+                <a href="model-enquiry.html" class="nav-link">MODEL ENQUIRY</a>
+                <a href="terms.html" class="nav-link">TERMS & CONDITIONS</a>
+            </div>
+            <div class="nav-icons">
+                <span class="nav-icon">👤</span>
+                <span class="nav-icon">📋</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bookings Page Content -->
+    <div class="models-page">
+        <div class="page-header">
+            <h1 class="page-title">My Bookings</h1>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="terms-box">
+            <h3 style="text-align: center; margin-bottom: 24px; color: #000;">Make a New Booking</h3>
+            <form id="bookingForm">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-bottom: 16px;">
+                    <div class="form-group">
+                        <label class="form-label">Your Name</label>
+                        <input type="text" id="clientName" class="form-input" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">WhatsApp Number</label>
+                        <div class="phone-input-container">
+                            <span class="phone-prefix">+</span>
+                            <input type="tel" id="clientWhatsapp" class="form-input phone-input" placeholder="2349018912194" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Business Instagram Handle</label>
+                        <input type="text" id="instagramHandle" class="form-input" placeholder="@your_business_handle" required>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 16px;">
+                    <div class="form-group">
+                        <label class="form-label">Booking Date</label>
+                        <input type="date" id="bookingDate" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Booking Time</label>
+                        <input type="time" id="bookingTime" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Duration (hours)</label>
+                        <select id="duration" class="form-input" required>
+                            <option value="">Select duration</option>
+                            <option value="2">2 hours</option>
+                            <option value="4">4 hours</option>
+                            <option value="5">5 hours (Standard)</option>
+                            <option value="6">6 hours</option>
+                            <option value="8">8 hours (Full Day)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-bottom: 16px;">
+                    <div class="form-group">
+                        <label class="form-label">Model Category</label>
+                        <select id="modelCategory" class="form-input" required>
+                            <option value="">Select category</option>
+                            <option value="basic">Basic Models</option>
+                            <option value="top">Top Models</option>
+                            <option value="featured">Featured Models</option>
+                            <option value="premium">Premium Models</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Shoot Type</label>
+                        <select id="shootType" class="form-input" required>
+                            <option value="">Select shoot type</option>
+                            <option value="Bridal Shoot">Bridal Shoot</option>
+                            <option value="Beauty Shoot">Beauty Shoot</option>
+                            <option value="Skincare Shoot">Skincare Shoot</option>
+                            <option value="Fashion Shoot">Fashion Shoot</option>
+                            <option value="Lingerie Shoot">Lingerie Shoot</option>
+                            <option value="Video Vixen">Video Vixen</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Location</label>
+                    <input type="text" id="location" class="form-input" placeholder="Shoot location" required>
+                </div>
+
+                <!-- Model Specifications -->
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: #be185d; margin-bottom: 16px; border-bottom: 2px solid #be185d; padding-bottom: 8px;">Model Requirements (Optional)</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 16px;">
+                        <div class="form-group">
+                            <label class="form-label">Preferred Height (cm)</label>
+                            <input type="number" id="preferredHeight" class="form-input" placeholder="165">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Preferred Size</label>
+                            <select id="preferredSize" class="form-input">
+                                <option value="">Any size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Bust Size (inches)</label>
+                            <input type="number" id="preferredBust" class="form-input" placeholder="34">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Waist Size (inches)</label>
+                            <input type="number" id="preferredWaist" class="form-input" placeholder="28">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Hip Size (inches)</label>
+                            <input type="number" id="preferredHips" class="form-input" placeholder="36">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Shoe Size</label>
+                            <input type="number" id="preferredShoeSize" class="form-input" placeholder="8">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Hair Color Preference</label>
+                            <select id="preferredHairColor" class="form-input">
+                                <option value="">Any hair color</option>
+                                <option value="Black">Black</option>
+                                <option value="Brown">Brown</option>
+                                <option value="Blonde">Blonde</option>
+                                <option value="Red">Red</option>
+                                <option value="Auburn">Auburn</option>
+                                <option value="Gray">Gray</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Age Range</label>
+                            <select id="preferredAge" class="form-input">
+                                <option value="">Any age</option>
+                                <option value="18-25">18-25 years</option>
+                                <option value="26-35">26-35 years</option>
+                                <option value="36-45">36-45 years</option>
+                                <option value="46+">46+ years</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Additional Requirements & Project Details</label>
+                    <textarea id="requirements" class="form-input" rows="4" placeholder="Describe your project, wardrobe requirements, styling preferences, mood/theme, etc."></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    📱 Book via WhatsApp & Instagram
+                </button>
+            </form>
+        </div>
+
+        <!-- Pricing Information -->
+        <div class="terms-box" style="margin-top: 32px;">
+            <h3 style="text-align: center; margin-bottom: 16px; color: #000;">Pricing Information</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="text-align: center; padding: 16px; background: rgba(255,255,255,0.3); border-radius: 12px;">
+                    <h4 style="color: #be185d; margin-bottom: 8px;">Basic Models</h4>
+                    <p style="font-size: 1.25rem; font-weight: bold; color: #000;">₦15,000 - ₦25,000</p>
+                    <p style="font-size: 0.875rem; color: #666;">per 5-hour session</p>
+                </div>
+                <div style="text-align: center; padding: 16px; background: rgba(255,255,255,0.3); border-radius: 12px;">
+                    <h4 style="color: #be185d; margin-bottom: 8px;">Top Models</h4>
+                    <p style="font-size: 1.25rem; font-weight: bold; color: #000;">₦30,000 - ₦45,000</p>
+                    <p style="font-size: 0.875rem; color: #666;">per 5-hour session</p>
+                </div>
+                <div style="text-align: center; padding: 16px; background: rgba(255,255,255,0.3); border-radius: 12px;">
+                    <h4 style="color: #be185d; margin-bottom: 8px;">Featured Models</h4>
+                    <p style="font-size: 1.25rem; font-weight: bold; color: #000;">₦50,000 - ₦70,000</p>
+                    <p style="font-size: 0.875rem; color: #666;">per 5-hour session</p>
+                </div>
+                <div style="text-align: center; padding: 16px; background: rgba(255,255,255,0.3); border-radius: 12px;">
+                    <h4 style="color: #be185d; margin-bottom: 8px;">Premium Models</h4>
+                    <p style="font-size: 1.25rem; font-weight: bold; color: #000;">₦75,000+</p>
+                    <p style="font-size: 0.875rem; color: #666;">per 5-hour session</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 16px; font-size: 0.875rem; color: #666;">
+                * Extra hours: ₦2,000 per hour (₦5,000 per hour after 6 PM)
+            </p>
+        </div>
+
+        <!-- Agency Footer with Social Media -->
+        <div class="agency-footer">
+            <div style="text-align: center; padding: 32px 24px; background: rgba(255,255,255,0.2); border-radius: 16px; margin-top: 32px;">
+                <h3 style="color: #be185d; margin-bottom: 20px; font-size: 1.5rem;">HDMODELS</h3>
+                <p style="margin-bottom: 20px; color: #333; font-size: 1rem;">Follow us on social media for updates and behind-the-scenes content</p>
+                
+                <div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 24px;">
+                    <a href="https://instagram.com/hdmodels" target="_blank" style="display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); color: white; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: transform 0.3s;">
+                        📷 Instagram
+                    </a>
+                    <a href="https://tiktok.com/@hdmodels" target="_blank" style="display: flex; align-items: center; gap: 8px; background: #000; color: white; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: transform 0.3s;">
+                        🎵 TikTok
+                    </a>
+                </div>
+                
+                <div style="border-top: 1px solid rgba(190, 24, 93, 0.3); padding-top: 20px; font-size: 0.875rem; color: #666;">
+                    <p style="margin-bottom: 8px;">Website developed by <span style="color: #be185d; font-weight: bold;">TechSignature</span></p>
+                    <p style="margin: 0;">© 2025 HDMODELS. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-banner" style="display: none;">
+        <div style="background: rgba(0,0,0,0.9); color: white; position: fixed; bottom: 0; left: 0; right: 0; padding: 20px; z-index: 1000; text-align: center;">
+            <p style="margin: 0 0 16px 0;">We use cookies to enhance your browsing experience and provide personalized content. By continuing to use our website, you consent to our use of cookies.</p>
+            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                <button onclick="acceptCookies()" style="background: #be185d; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold;">Accept All Cookies</button>
+                <button onclick="declineCookies()" style="background: transparent; color: white; border: 1px solid white; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

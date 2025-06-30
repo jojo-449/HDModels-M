@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Booking History - HDMODELS Fashion Agency</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="home.html" class="nav-link">HOME-PAGE</a>
+                    <a href="models.html" class="nav-link">MODEL</a>
+                    <a href="booking-history.html" class="nav-link">BOOKINGS</a>
+                    <a href="about.html" class="nav-link">ABOUT US</a>
+                    <a href="model-enquiry.html" class="nav-link">MODEL ENQUIRY</a>
+                    <a href="terms.html" class="nav-link">TERMS & CONDITIONS</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="login copy.html" class="nav-icon">👤</a>
+                    <span class="nav-icon">📋</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Booking History Container -->
+        <div class="booking-history-container">
+            <div class="booking-history-header">
+                <h1>Your Booking History</h1>
+                <p class="user-info" id="userInfo">Welcome back!</p>
+            </div>
+
+            <!-- No Bookings Message -->
+            <div id="noBookingsMessage" class="no-bookings-message">
+                <div class="no-bookings-card">
+                    <h3>No Bookings Yet</h3>
+                    <p>You haven't made any model bookings yet. Start by browsing our amazing models!</p>
+                    <a href="models.html" class="cta-button">Browse Models</a>
+                </div>
+            </div>
+
+            <!-- Bookings List -->
+            <div id="bookingsList" class="bookings-list" style="display: none;">
+                <!-- Bookings will be populated by JavaScript -->
+            </div>
+
+            <!-- Login Required Message -->
+            <div id="loginRequired" class="login-required-message" style="display: none;">
+                <div class="login-required-card">
+                    <h3>Login Required</h3>
+                    <p>Please login to view your booking history</p>
+                    <a href="login copy.html" class="cta-button">Login Now</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="script (1).js"></script>
+    </body>
+</html>
