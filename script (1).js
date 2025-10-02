@@ -2,9 +2,9 @@
 
 // WhatsApp Integration
 function generateWhatsAppURL(phoneNumber, message) {
-    const cleanNumber = phoneNumber.replace(/[^0-9]/g, '');
-    const encodedMessage = encodeURIComponent(message);
-    return `https://wa.me/${cleanNumber}?text=${encodedMessage}`;
+    const cleaned = String(phoneNumber).replace(/[^0-9]/g, '');
+    const encoded = encodeURIComponent(message || '');
+    return `https://wa.me/${cleaned}?text=${encoded}`;
 }
 
 // Phone number validation
@@ -90,7 +90,7 @@ function handleBookingSubmit(e) {
     const pricing = {
         'basic': { min: 15000, max: 25000 },
         'top': { min: 30000, max: 45000 },
-        'featured': { min: 50000, max: 70000 },
+        'elite': { min: 50000, max: 70000 },
         'premium': { min: 75000, max: 100000 }
     };
     
@@ -136,7 +136,7 @@ ${modelRequirements}${formData.requirements ? `*ADDITIONAL REQUIREMENTS:*\n${for
 Thank you!`;
     
     // Agency WhatsApp number (replace with actual number)
-    const agencyWhatsApp = '2349018912194'; // Your WhatsApp number
+    const agencyWhatsApp = '2348146518310'; // Your WhatsApp number
     
     // Generate WhatsApp URL and open
     const whatsappURL = generateWhatsAppURL(agencyWhatsApp, message);
@@ -249,7 +249,7 @@ ${formData.motivation}
 Looking forward to hearing from you!`;
     
     // Agency WhatsApp number
-    const agencyWhatsApp = '2349018912194';
+    const agencyWhatsApp = '2348146518310';
     
     // Send to Gmail instead of WhatsApp for model applications
     sendModelApplicationToGmail({
@@ -407,7 +407,7 @@ function calculatePrice(category, duration) {
     const pricing = {
         'basic': { min: 15000, max: 25000 },
         'top': { min: 30000, max: 45000 },
-        'featured': { min: 50000, max: 70000 },
+        'elite': { min: 50000, max: 70000 },
         'premium': { min: 75000, max: 100000 }
     };
     
@@ -489,7 +489,7 @@ function sendModelApplicationToGmail(applicationData) {
     })
     .catch(error => {
         console.error('Error submitting application:', error);
-        alert('There was an error submitting your application. Please try again or contact us directly at +2349018912194.');
+        alert('There was an error submitting your application. Please try again or contact us directly at +2348146518310.');
     })
     .finally(() => {
         submitBtn.textContent = originalText;
@@ -647,10 +647,219 @@ const modelGalleryData = {
     ],
     top: [
         // ADD YOUR TOP MODELS HERE - EXAMPLE:
-        {
+        
+
+ {
             id: 'top_1',
-            name: 'Isabella Rose',
-            image: 'path/to/isabella-main.jpg',
+            name: 'Fehilah',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.05_27012135.jpg',
+            additionalImages: [
+                'top models/WhatsApp Image 2025-09-15 at 22.23.01_ee3b4ffe.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '5^3',
+            size: 'uk-size 6/8',
+            bust: '32"',
+            waist: '26"',
+            hips: '39"',
+            shoeSize: '39/40',
+            hairColor: 'ginger-natural',
+            eyeColor: 'dark-brown',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen','Skin-care'],
+            // availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+         {
+            id: 'top_2',
+            name: 'Gold',
+            image: 'top models/IMG_0721.JPG',
+            additionalImages: [
+                '',
+                'top models/IMG_0723.JPG',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '5^10',
+            size: '10/12',
+            bust: '40"',
+            waist: '36"',
+            hips: '46"',
+            shoeSize: '43',
+            hairColor: 'color-2(relaxed)',
+            eyeColor: 'brown',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen','Skin-care'],
+            // availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+        
+ {
+            id: 'top_3',
+            name: 'Princess',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.05_ba2961e7.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+             id: 'top_4',
+         name: 'Funmibi',
+            image: 'top models/WhatsApp Image 2025-09-15 at 22.22.58_13f510f3.jpg',
+            additionalImages: [
+                'top models/WhatsApp Image 2025-09-15 at 22.22.57_38ca0dd5.jpg',
+                'top models/WhatsApp Image 2025-09-15 at 22.22.57_214a72ed.jpg',
+               
+            ],
+             height:'5*4"',
+             size: 'uk-8"',
+           bust:'35"',
+           waist:'29"',
+           hips:'39"',
+           shoeSize:'38',
+           hairColor: 'Black(relaxed)',
+           eyeColor: 'Black', 
+           about: 'My name is funmibi, I’m a student and a face model.  I’m very passionate about modeling and how to even becoming more better in the career, and with the help of HDMODELS I’ve been able to work and also learn to perfect my skills',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+            
+        },
+
+        {
+            id: 'top_5',
+            name: 'Christine',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.06_1d3d794e.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_6',
+            name: 'Benny',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.06_70cfdd0a.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_7',
+            name: 'Everly',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.06_c81bf50a.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_8',
+            name: 'Elizabeth',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.06_dd98867c.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_9',
+            name: 'Chinaza',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.07_2ae17b7d.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+         {
+            id: 'top_10',
+            name: 'Rolex',
+            image: 'top models/WhatsApp Image 2025-09-16 at 00.57.57_4a4ded19.jpg',
             additionalImages: [
                 'path/to/isabella-2.jpg',
                 'path/to/isabella-3.jpg',
@@ -658,45 +867,503 @@ const modelGalleryData = {
                 'path/to/isabella-video.mp4'
             ],
             height: '168cm',
-            size: 'S',
-            bust: '34"',
-            waist: '25"',
-            hips: '35"',
-            shoeSize: '8',
-            hairColor: 'Blonde',
-            eyeColor: 'Blue',
+            size: '..',
+            bust: '."',
+            waist: '.."',
+            hips: '.."',
+            shoeSize: '..',
+            hairColor: '..',
+            eyeColor: '..',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen'],
-            price: '₦100,000 - ₦150,000',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
             availability: 'Monday - Saturday: 10AM - 8PM'
-        }
-        // ADD MORE MODELS HERE
-    ],
-    premium: [
-        // ADD YOUR PREMIUM MODELS HERE - EXAMPLE:
-        {
-            id: 'premium_1',
-            name: 'Victoria Elegant',
-            image: 'path/to/victoria-main.jpg',
+        },
+
+         {
+            id: 'top_11',
+            name: 'Dominion',
+            image: 'top models/IMG_2306.JPG',
             additionalImages: [
-                'path/to/victoria-2.jpg',
-                'path/to/victoria-3.jpg',
-                'path/to/victoria-4.jpg',
-                'path/to/victoria-video.mp4'
+                'top models/IMG_2307.JPG',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
             ],
-            height: '170cm',
-            size: 'XS',
-            bust: '34"',
-            waist: '24"',
-            hips: '35"',
-            shoeSize: '8',
+            height: '5^5',
+            size: '10',
+            bust: '36"',
+            waist: '30"',
+            hips: '40"',
+            shoeSize: 'small 40',
             hairColor: 'Black',
-            eyeColor: 'Brown',
-            about: 'Premium model specializing in luxury brand campaigns and high-end fashion.',
+            eyeColor: 'Black(Natural)',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.Been modelling for monts now and it has been going well!.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_1',
+            name: 'Florence',
+            image: 'top models/WhatsApp Image 2025-09-16 at 00.57.57_fd02d33b.jp',
+            additionalImages: [
+                'top models/WhatsApp Image 2025-09-16 at 00.57.57_7fba98d6.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '5^4',
+            size: '10',
+            bust: '37"',
+            waist: '35"',
+            hips: '42"',
+            shoeSize: '41',
+            hairColor: 'Black(Natural)',
+            eyeColor: 'Dark Brown',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_12',
+            name: 'Promise',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.07_aded66e6.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_13',
+            name: 'Favour',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.08_6d330f70.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_14',
+            name: 'Clare',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.08_59a231d9.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+         {
+           id: 'top_15',
+            name: 'Blessing',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.08_823ae6ed.jpg',
+            additionalImages: [
+                'top models/WhatsApp Image 2025-09-15 at 22.22.59_47134015.jpg',
+                'top models/WhatsApp Image 2025-09-15 at 22.22.59_675d8bb4.jpg',
+                
+            ],
+             height:'5*7"',
+             size: 'uk-6/8"',
+           bust:'32"',
+           waist:'27"',
+           hips:'36"',
+          hairColor: 'Black(relaxed)',
+           shoeSize:'37-38"',
+           eyeColor: 'Brown', 
+           about: 'BLESSING ADAEZE MICEAL>>AE:20>>NATIONALITY:NIERIA>>SATE OF ORIIN:ABIA STATE>>I have worked on commercial,print and event campaigns for several brands,i enjoy working with brands that',
             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-            price: '₦200,000 - ₦300,000',
-            availability: 'Monday - Saturday: 11AM - 9PM'
-        }
+             availability: 'Monday - Saturday: 10AM - 8PM'
+            
+        },
+
+        {
+            id: 'top_16',
+            name: 'Ebube',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.08_c7dc07ec.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_17',
+            name: 'Tofunmi',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.09_4517eacd.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_18',
+            name: 'Frank',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.09_73123808.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_19',
+            name: 'Olayinka',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.09_aebae7b9.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_20',
+            name: 'Adedayo',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.10_6a5f23b4.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_21',
+            name: 'Joan',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.10_0635faa7.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_22',
+            name: 'Fave',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.10_4221800f.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_23',
+            name: 'Hope',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.10_f071227b.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_24',
+            name: 'Lauretta',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.11_7dc3ae49.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_25',
+            name: 'Victoria',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.11_63eea47c.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_26',
+            name: 'Samantha',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.11_b74fe721.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_27',
+            name: 'Gbemi',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.11_bf220ff3.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_28',
+            name: 'Choice',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.12_1efacad7.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        }, 
+
+       {
+            id: 'top_29',
+            name: 'Alex',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.12_a64cdbcb.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+             height: '...',
+            size: '.',
+            bust: '..."',
+            waist: '..."',
+            hips: '..."',
+            shoeSize: '.',
+            hairColor: '...',
+            eyeColor: '...',
+            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+        {
+            id: 'top_30',
+            name: 'Amarachi',
+            image: 'top models/girllllll.jpg',
+            additionalImages: [
+                'path/to/isabella-2.jpg',
+                'path/to/isabella-3.jpg',
+                'path/to/isabella-4.jpg',
+                'path/to/isabella-video.mp4'
+            ],
+            height: '5^10',
+            size: '10',
+            bust: '39"',
+            waist: '33"',
+            hips: '43"',
+            shoeSize: '42/43',
+            hairColor: 'dark-brown/realxed',
+            eyeColor: 'dark-brown',
+            about: 'My name is Amarachi and I^m a 19 year old commercial and face model under Hd models based between Lagos and Enugu Currently in university,I bring a clean,expressive look and on-camera, confidence to beauty, lifestyle and brand campaigns',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            // availability: 'Monday - Saturday: 10AM - 8PM'
+        },
+
+
+        
         // ADD MORE MODELS HERE
     ],
     elite: [
@@ -723,8 +1390,233 @@ const modelGalleryData = {
             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
             price: '₦500,000 - ₦1,000,000',
             availability: 'By Appointment: 12PM - 10PM'
-        }
+        },
         // ADD MORE MODELS HERE
+         {
+            id: 'elite_2',
+            name: 'Jessica oba',
+            image: 'Elitemodels/jessica premium.jpg',
+            additionalImages: [
+                'Elitemodels/IMG_5451.JPG',
+                'Elitemodels/IMG_5449.JPG',
+                'path/to/anastasia-4.jpg',
+                'path/to/anastasia-video.mp4'
+            ],
+            height: '5^11',
+            size: '14',
+            bust: '39"',
+            waist: '32"',
+            hips: '43"',
+            shoeSize: '42/43',
+            hairColor: 'Black',
+            eyeColor: 'Brown',
+            about: 'Elite supermodel with international campaign experience and runway expertise.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
+            price: '₦500,000 - ₦1,000,000',
+            availability: 'By Appointment: 12PM - 10PM'
+        },
+
+        {
+            id: 'elite_3',
+            name: 'Finey',
+            image: 'path/to/anastasia-main.jpg',
+            additionalImages: [
+                'path/to/anastasia-2.jpg',
+                'path/to/anastasia-3.jpg',
+                'path/to/anastasia-4.jpg',
+                'path/to/anastasia-video.mp4'
+            ],
+            height: '5^5',
+            size: '8',
+            bust: '34"',
+            waist: '27"',
+            hips: '40"',
+            shoeSize: '39',
+            hairColor: 'Brown',
+            eyeColor: 'Brown',
+            about: 'I started modeling professionally this year and have worked with a range of brands across fashion and beauty. I’m passionate about bringing creative ideas to life through visuals and enjoy being part of teams that value quality and expression.I love modeling because it allows me to express different moods, styles, and stories  and I’m always looking to grow, learn, and bring value to any project I’m part of.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
+            price: '₦500,000 - ₦1,000,000',
+            availability: 'By Appointment: 12PM - 10PM'
+        },
+    ],
+
+
+    premium: [
+        // ADD YOUR ELITE MODELS HERE - EXAMPLE:4
+         {
+            id: 'elite_1',
+            name: 'Anastasia Divine',
+            image: 'path/to/anastasia-main.jpg',
+            additionalImages: [
+                'path/to/anastasia-2.jpg',
+                'path/to/anastasia-3.jpg',
+                'path/to/anastasia-4.jpg',
+                'path/to/anastasia-video.mp4'
+            ],
+            height: '175cm',
+            size: 'XS',
+            bust: '34"',
+            waist: '23"',
+            hips: '34"',
+            shoeSize: '8',
+            hairColor: 'Auburn',
+            eyeColor: 'Green',
+            about: 'Elite supermodel with international campaign experience and runway expertise.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
+            // price: '₦500,000 - ₦1,000,000',
+            // availability: 'By Appointment: 12PM - 10PM'
+        },
+       
+        // ADD MORE MODELS HERE
+         {
+           id: 'premium_1',
+            name: 'Temiloluwa',
+            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.05_733d8200.jpg',
+            additionalImages: [
+                'top models/model1.jpg',
+                '',
+                '',
+                ''
+            ],
+             height:'5*6"',
+             size: 'uk-6"',
+           bust:'35"',
+           Waist:'28"',
+           hips:'38"',
+           shoeSize:'39"',
+            hairColor: 'Black(relaxed)',
+           eyeColor: 'Deep Brown', 
+           about: '',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
+            price: '₦500,000 - ₦1,000,000',
+            availability: 'By Appointment: 12PM - 10PM'
+            
+        },
+
+         {
+           id: 'premium_2',
+            name: 'Ndi Amaka',
+            image: 'premium models/WhatsApp Image 2025-09-15 at 22.22.55_79ebf4f5.jpg',
+            additionalImages: [
+                'top models/model1.jpg',
+                'premium models/WhatsApp Image 2025-09-15 at 22.22.53_a893620b.jpg',
+                'premium models/WhatsApp Image 2025-09-15 at 22.22.54_fa8ed431.jpg',
+                'premium models/WhatsApp Image 2025-09-15 at 22.22.55_fcfd58d5.jpg'
+            ],
+             height:'5*7"',
+             size: 'uk-6"',
+           bust:'30"',
+           Waist:'25"',
+           hips:'34"',
+           shoeSize:'38"',
+          hairColor: 'Black(relaxed)',
+           eyeColor: 'Black', 
+           about: '',
+             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
+            price: '₦500,000 - ₦1,000,000',
+            availability: 'By Appointment: 12PM - 10PM'
+            
+        },
+
+         {
+           id: 'premium_3',
+            name: 'Bukola',
+            image: 'premium models/WhatsApp Image 2025-09-15 at 22.22.55_bf492e2c.jpg',
+            additionalImages: [
+            
+                'premium models/adeotun.jpg',
+                'premium models/WhatsApp Image 2025-09-15 at 22.22.56_dada021c.jpg',
+                'premium models/WhatsApp Image 2025-09-15 at 22.22.55_bf492e2c.jpg'
+            ],
+             height:'"',
+             size: 'uk-6"',
+           bust:'30"',
+           waist:'25"',
+           hips:'34"',
+            shoeSize:'38"',
+          hairColor: 'Black(relaxed)',
+           eyeColor: 'Black', 
+           about: 'My name is Olatunbosun Rejoice, I^m 19 years old and still a student . I have started my modelling career since 2022 till date. I am a face and fashion model . I am a model under Honey drop modelling agency since 2023.',
+             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
+            price: '₦500,000 - ₦1,000,000',
+            availability: 'By Appointment: 12PM - 10PM'
+            
+        },
+
+        {
+           id: 'premium_4',
+            name: 'Rejoice',
+            image: 'premium models/WhatsApp Image 2025-09-15 at 22.22.57_edf0f59f.jpg',
+            additionalImages: [
+                '',
+                '',
+                '',
+                ''
+            ],
+             height:'5*5"',
+             size: 'uk-6/8"',
+           bust:'32"',
+           waist:'27"',
+           hips:'38"',
+            shoeSize:'39"',
+          hairColor: 'Brown(relaxed)',
+           eyeColor: 'Black', 
+           about: 'My name is Olatunbosun Rejoice, I^m 19 years old and still a student . I have started my modelling career since 2022 till date. I am a face and fashion model . I am a model under Honey drop modelling agency since 2023.',
+             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
+            price: '₦500,000 - ₦1,000,000',
+            availability: 'By Appointment: 12PM - 10PM'
+            
+        },
+
+        {
+           id: 'premium_5',
+            name: 'Jane',
+            image: 'premium models/WhatsApp Image 2025-09-15 at 22.23.03_b1404d23.jpg',
+            additionalImages: [
+                'premium models/WhatsApp Image 2025-09-15 at 22.23.02_634c9e6e.jpg',
+                '',
+                '',
+                ''
+            ],
+             height:'..."',
+             size: 'uk-14"',
+           bust:'42 and a half"',
+           waist:'36"',
+           hips:'45"',
+           shoeSize:'42"',
+          hairColor: 'Black(relaxed)',
+           eyeColor: 'Brown', 
+           about: '',
+             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
+            price: '₦500,000 - ₦1,000,000',
+            availability: 'By Appointment: 12PM - 10PM'
+        },
+
+        {
+           id: 'premium_6',
+            name: 'Feyi',
+            image: 'premium models/WhatsApp Image 2025-09-15 at 22.23.03_f3ad781e.jpg',
+            additionalImages: [
+                '',
+                '',
+                '',
+                ''
+            ],
+             height:'5*7"',
+             size: 'uk-10"',
+           bust:'38"',
+           waist:'34/35"',
+           hips:'39"',
+           shoeSize:'38/39"',
+          hairColor: 'Brown(relaxed)',
+           eyecolor: 'Dark Brown', 
+           about: 'Well, I’m Feyi a fashion designer and model. I love creating and also being in front of the camera. Modeling has given me the chance to express myself in different ways and it’s helped me grow so much.',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
+            availability: 'By Appointment: 12PM - 10PM'
+            
+           
+        },
     ]
 };
 
@@ -755,7 +1647,7 @@ function renderModelGallery(category) {
             <div class="model-info">
                 <div class="model-name">${model.name}</div>
                 <div class="model-quick-info">${model.height} • ${model.size} • ${model.hairColor}</div>
-                <div class="model-price">${model.price}</div>
+               
             </div>
         </div>
     `).join('');
@@ -785,7 +1677,7 @@ function openModelModal(modelId, category) {
                 
                 <!-- Model Details Section -->
                 <div class="model-details-section">
-                    <h2>${model.name}</h2>
+                    <h2 style="color:black">${model.name}</h2>
                     <div class="model-measurements">
                         <div class="measurement-row">
                             <span>Height:</span> <span>${model.height}</span>
@@ -823,15 +1715,12 @@ function openModelModal(modelId, category) {
                         <p>${model.availability}</p>
                     </div>
                     
-                    <div class="model-pricing">
-                        <h4>Pricing</h4>
-                        <p>${model.price}</p>
-                    </div>
+                
                 </div>
                 
                 <!-- Booking Form Section -->
                 <div class="booking-form-section">
-                    <h3>Book ${model.name}</h3>
+                    <h3 style="color:black">Book ${model.name}</h3>
                     
                     <!-- Shoot Type Selection -->
                     <div class="shoot-types-selection">
@@ -841,7 +1730,7 @@ function openModelModal(modelId, category) {
                                 <label>
                                     <input type="checkbox" name="shootType" value="${type}"> ${type}
                                 </label>
-                                <button type="button" class="expand-requirements" onclick="toggleRequirements('${type.toLowerCase()}')">
+                                <button style="color:black" type="button" class="expand-requirements" onclick="toggleRequirements ('${type.toLowerCase()}')">
                                     ▼ Add Specific Requirements
                                 </button>
                                 <div id="${type.toLowerCase()}-requirements" class="requirements-box" style="display: none;">
@@ -854,38 +1743,45 @@ function openModelModal(modelId, category) {
                     <!-- Date and Time -->
                     <div class="datetime-section">
                         <div class="input-group">
-                            <label>Preferred Date</label>
+                            <label style="color:black;">Preferred Date</label>
                             <input type="date" id="bookingDate" required>
                         </div>
-                        <div class="input-group">
-                            <label>Preferred Time</label>
+
+                         <div class="input-group">
+                            <label style="color:black;">Preferred Time</label>
                             <input type="time" id="bookingTime" required>
                         </div>
+
+                        
+            
                         <div class="input-group">
-                            <label>Duration (hours)</label>
+                            <label style="color:black;">Duration (hours)</label>
                             <select id="bookingDuration">
-                                <option value="2">2 hours</option>
-                                <option value="4">4 hours</option>
-                                <option value="6">6 hours</option>
-                                <option value="8">8 hours (Full Day)</option>
+                                <option value="2">7-12 hours</option>
+                                <option value="4">8-1 hours</option>
+                                <option value="6">9-2 hours</option>
+                                <option value="6">10-3 hours</option>
+                                <option value="6">11-4 hours</option>
+                                <option value="6">12-5 hours</option>
+                                <option value="8">9-5 hours (Full Day)</option>
                             </select>
                         </div>
                     </div>
                     
                     <!-- Model Requirements -->
                     <div class="model-requirements">
-                        <label>Additional Requirements for Model</label>
+                        <label style="color:black;">Additional Requirements for Model</label>
                         <textarea id="modelRequirements" placeholder="Specify any special requirements, wardrobe, makeup style, etc."></textarea>
                     </div>
                     
                     <!-- Booking Buttons -->
                     <div class="booking-buttons">
-                        <button type="button" class="book-whatsapp" onclick="bookViaWhatsApp('${model.id}', '${category}')">
-                            📱 Book via WhatsApp
+                        <button style="color:black "type="button" class="book-whatsapp" onclick="bookViaWhatsApp('${model.id}', '${category}')"> 📱 Book via WhatsApp</button>
+                           
+                        
+                        <button style="color:black" type="button" class="book-instagram" onclick="bookViaInstagram('${model.id}', '${category}')">   📷 Book via Instagram
                         </button>
-                        <button type="button" class="book-instagram" onclick="bookViaInstagram('${model.id}', '${category}')">
-                            📷 Book via Instagram
-                        </button>
+                         
                     </div>
                 </div>
             </div>
@@ -961,7 +1857,9 @@ function bookViaWhatsApp(modelId, category) {
         clientName: userAuth.getCurrentUser()?.name || 'Client'
     });
     
-    const whatsappUrl = generateWhatsAppUrl('+2349018912194', bookingMessage);
+    const whatsappUrl = generateWhatsAppUrl(+2348146518310, bookingMessage);
+    console.log("Booking message:", bookingMessage);
+    console.log("WhatsApp URL:", wa.me/2348146518310);
     window.open(whatsappUrl, '_blank');
     
     // Save booking to history
@@ -979,6 +1877,20 @@ function bookViaWhatsApp(modelId, category) {
     
     closeEnhancedModal();
 }
+
+function generateBookingMessage(details) {
+    return `Hi! I'd like to book ${details.modelName} (${details.modelCategory} model).
+
+📅 Date: ${details.date}
+⏰ Time: ${details.time}
+⏱ Duration: ${details.duration}
+🎬 Shoot Type(s): ${details.shootTypes}
+📝 Requirements: ${details.requirements}
+${details.specificRequirements}
+
+Client: ${details.clientName}`;
+}
+
 
 function bookViaInstagram(modelId, category) {
     const model = window.currentModelForBooking;
@@ -1013,13 +1925,13 @@ Client: ${userAuth.getCurrentUser()?.name || 'Client'}`;
     navigator.clipboard.writeText(bookingDetails).then(() => {
         alert('Booking details copied to clipboard! You will now be redirected to Instagram to send the message.');
         const user = userAuth.getCurrentUser();
-        const instagramHandle = user?.businessInstagram || 'hdmodelsagency';
-        window.open(`https://www.instagram.com/${instagramHandle.replace('@', '')}/`, '_blank');
+        const instagramHandle = user?.businessInstagram || 'hdmodels.co';
+        window.open(`https://www.instagram.com/_hdmodels?igsh=ajdvbDd3NzA4d202${instagramHandle.replace('@', '')}/`, '_blank');
     }).catch(() => {
         alert('Please copy this booking information and send it via Instagram DM:\n\n' + bookingDetails);
         const user = userAuth.getCurrentUser();
         const instagramHandle = user?.businessInstagram || 'hdmodelsagency';
-        window.open(`https://www.instagram.com/${instagramHandle.replace('@', '')}/`, '_blank');
+        window.open(`https://www.instagram.com/_hdmodels?igsh=ajdvbDd3NzA4d202${instagramHandle.replace('@', '')}/`, '_blank');
     });
     
     // Save booking to history
@@ -1037,6 +1949,123 @@ Client: ${userAuth.getCurrentUser()?.name || 'Client'}`;
     
     closeEnhancedModal();
 }
+
+// Signup Form Handler - Added for user authentication system
+function handleSignup(e) {
+    e.preventDefault();
+    
+    const instagramHandle = document.getElementById('signupInstagram').value;
+    const whatsappNumber = document.getElementById('signupWhatsapp').value;
+    const password = document.getElementById('signupPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    
+    // Clear previous errors
+    document.getElementById('instagramError').style.display = 'none';
+    document.getElementById('whatsappError').style.display = 'none';
+    document.getElementById('passwordError').style.display = 'none';
+    document.getElementById('confirmPasswordError').style.display = 'none';
+    
+    let hasErrors = false;
+    
+    // Validate Instagram handle
+    if (!instagramHandle) {
+        document.getElementById('instagramError').textContent = 'Business Instagram handle is required';
+        document.getElementById('instagramError').style.display = 'block';
+        hasErrors = true;
+    } else if (!validateInstagramHandle(instagramHandle)) {
+        document.getElementById('instagramError').textContent = 'Please enter a valid Instagram handle (e.g., @your_business)';
+        document.getElementById('instagramError').style.display = 'block';
+        hasErrors = true;
+    }
+    
+    // Validate WhatsApp number
+    if (!whatsappNumber) {
+        document.getElementById('whatsappError').textContent = 'WhatsApp number is required';
+        document.getElementById('whatsappError').style.display = 'block';
+        hasErrors = true;
+    } else if (!validateWhatsAppNumber(whatsappNumber)) {
+        document.getElementById('whatsappError').textContent = 'Please enter a valid WhatsApp number (10-15 digits)';
+        document.getElementById('whatsappError').style.display = 'block';
+        hasErrors = true;
+    }
+    
+    // Validate password
+    if (!password) {
+        document.getElementById('passwordError').textContent = 'Password is required';
+        document.getElementById('passwordError').style.display = 'block';
+        hasErrors = true;
+    } else if (!validatePassword(password)) {
+        document.getElementById('passwordError').textContent = 'Password must be at least 6 characters long';
+        document.getElementById('passwordError').style.display = 'block';
+        hasErrors = true;
+    }
+    
+    // Validate confirm password
+    if (!confirmPassword) {
+        document.getElementById('confirmPasswordError').textContent = 'Please confirm your password';
+        document.getElementById('confirmPasswordError').style.display = 'block';
+        hasErrors = true;
+    } else if (password !== confirmPassword) {
+        document.getElementById('confirmPasswordError').textContent = 'Passwords do not match';
+        document.getElementById('confirmPasswordError').style.display = 'block';
+        hasErrors = true;
+    }
+    
+    if (hasErrors) {
+        return;
+    }
+    
+    const result = userAuth.signup(instagramHandle, whatsappNumber, password);
+    
+    if (result.success) {
+        alert('Account created successfully! Please login to continue.');
+        window.location.href = 'login.html';
+    } else {
+        alert('Failed to create account: ' + result.message);
+    }
+}
+
+// Login Form Handler - Added for user authentication system
+function handleLogin(e) {
+    e.preventDefault();
+    
+    const identifier = document.getElementById('loginIdentifier').value;
+    const password = document.getElementById('loginPassword').value;
+    
+    // Clear previous errors
+    document.getElementById('identifierError').style.display = 'none';
+    document.getElementById('loginPasswordError').style.display = 'none';
+    
+    let hasErrors = false;
+    
+    // Validate identifier
+    if (!identifier) {
+        document.getElementById('identifierError').textContent = 'Instagram handle or WhatsApp number is required';
+        document.getElementById('identifierError').style.display = 'block';
+        hasErrors = true;
+    }
+    
+    // Validate password
+    if (!password) {
+        document.getElementById('loginPasswordError').textContent = 'Password is required';
+        document.getElementById('loginPasswordError').style.display = 'block';
+        hasErrors = true;
+    }
+    
+    if (hasErrors) {
+        return;
+    }
+    
+    const result = userAuth.login(identifier, password);
+    
+    if (result.success) {
+        alert('Welcome! You are now logged in.');
+        window.location.href = 'index.html';
+    } else {
+        alert('Login failed: ' + result.message);
+    }
+}
+// ===== END OF SIGNUP & LOGIN AUTHENTICATION SYSTEM =====
 
 // Booking History Functions
 function initializeBookingHistory() {
@@ -1145,3 +2174,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+

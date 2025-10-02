@@ -20,7 +20,7 @@
             </div>
             <div class="nav-icons">
                  <a href="login copy.html" class="nav-icon">👤</a>
-                <span class="nav-icon">📋</span>
+             
             </div>
         </div>
     </nav>
@@ -38,40 +38,41 @@
         <!-- Application Form -->
         <div class="terms-box">
             <h3 style="text-align: center; margin-bottom: 24px; color: #000;">Model Application Form</h3>
+            
             <form id="modelApplicationForm">
                 <!-- Personal Information -->
                 <div style="margin-bottom: 32px;">
                     <h4 style="color: #be185d; margin-bottom: 16px; border-bottom: 2px solid #be185d; padding-bottom: 8px;">Personal Information</h4>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
                         <div class="form-group">
-                            <label class="form-label">Full Name *</label>
+                            <label for="fullName" class="form-label">Full Name *</label>
                             <input type="text" id="fullName" class="form-input" placeholder="Enter your full name" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Email Address *</label>
+                            <label for="email" class="form-label">Email Address *</label>
                             <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">WhatsApp Number *</label>
+                            <label for="whatsappNumber" class="form-label">WhatsApp Number *</label>
                             <div class="phone-input-container">
                                 <span class="phone-prefix">+</span>
-                                <input type="tel" id="whatsappNumber" class="form-input phone-input" placeholder="2349018912194" required>
+                                <input type="tel" id="whatsappNumber" class="form-input phone-input" placeholder="2347014012692" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Instagram Handle</label>
+                            <label for="instagramHandle" class="form-label">Instagram Handle</label>
                             <input type="text" id="instagramHandle" class="form-input" placeholder="@your_handle">
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Date of Birth *</label>
+                            <label for="dateOfBirth" class="form-label">Date of Birth *</label>
                             <input type="date" id="dateOfBirth" class="form-input" required>
                         </div>
                          <div class="form-group">
-                            <label class="form-label">Age *</label>
+                            <label for="Age" class="form-label">Age *</label>
                             <input type="Age" id="Age" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Location *</label>
+                            <label for="location" class="form-label">Location *</label>
                             <input type="text" id="location" class="form-input" placeholder="City, State" required>
                         </div>
                     </div>
@@ -82,11 +83,11 @@
                     <h4 style="color: #be185d; margin-bottom: 16px; border-bottom: 2px solid #be185d; padding-bottom: 8px;">Physical Measurements</h4>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
                         <div class="form-group">
-                            <label class="form-label">Height (cm) *</label>
+                            <label for="height" class="form-label">Height (cm) *</label>
                             <input type="number" id="height" class="form-input" placeholder="165" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Dress Size *</label>
+                            <label for="dressSize" class="form-label">Dress Size *</label>
                             <select id="dressSize" class="form-input" required>
                                 <option value="">Select size</option>
                                 <option value="XS">6</option>
@@ -98,23 +99,23 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Bust (inches) *</label>
+                            <label for="bust" class="form-label">Bust (inches) *</label>
                             <input type="number" id="bust" class="form-input" placeholder="34" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Waist (inches) *</label>
+                            <label for="waist" class="form-label">Waist (inches) *</label>
                             <input type="number" id="waist" class="form-input" placeholder="28" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Hips (inches) *</label>
+                            <label for="hips" class="form-label">Hips (inches) *</label>
                             <input type="number" id="hips" class="form-input" placeholder="36" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Shoe Size *</label>
+                            <label for="shoeSize" class="form-label">Shoe Size *</label>
                             <input type="number" id="shoeSize" class="form-input" placeholder="8" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Natural Hair Color *</label>
+                            <label for="hairColor" class="form-label">Natural Hair Color *</label>
                             <select id="hairColor" class="form-input" required>
                                 <option value="">Select hair color</option>
                                 <option value="Black">Black</option>
@@ -127,13 +128,13 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Natural Eye Color *</label>
+                            <label for="eyeColor" class="form-label">Natural Eye Color *</label>
                             <select id="eyeColor" class="form-input">
                                 <option value="">Select eye color</option>
                                 <option value="Brown">Brown</option>
                                 <option value="Black">Black</option>
                                 <option value="Blue">Blue</option>
-                                <option value="Green">Green</option>
+                                <option value="Green">Dark brown</option>
                                 <option value="Hazel">Hazel</option>
                                 <option value="Gray">Gray</option>
                             </select>
@@ -148,7 +149,7 @@
                     <h4 style="color: #be185d; margin-bottom: 16px; border-bottom: 2px solid #be185d; padding-bottom: 8px;">Experience & Portfolio</h4>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
                         <div class="form-group">
-                            <label class="form-label">Modeling Experience</label>
+                            <label for="experience" class="form-label">Modeling Experience</label>
                             <select id="experience" class="form-input">
                                 <option value="">Select experience level</option>
                                 <option value="Beginner">Beginner (0-1 years)</option>
@@ -158,12 +159,12 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Portfolio/Instagram Link</label>
+                            <label for="portfolioLink" class="form-label">Portfolio/Instagram Link</label>
                             <input type="url" id="portfolioLink" class="form-input" placeholder="https://instagram.com/yourhandle">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Previous Work/Experience (Optional)</label>
+                        <label for="previousWork" class="form-label">Previous Work/Experience (Optional)</label>
                         <textarea id="previousWork" class="form-input" rows="4" placeholder="Describe any previous modeling work, brands you've worked with, or relevant experience..."></textarea>
                     </div>
                 </div>
@@ -172,11 +173,11 @@
                 <div style="margin-bottom: 32px;">
                     <h4 style="color: #be185d; margin-bottom: 16px; border-bottom: 2px solid #be185d; padding-bottom: 8px;">Additional Information</h4>
                     <div class="form-group">
-                        <label class="form-label">Why do you want to join HDMODELS?</label>
+                        <label for="motivation" class="form-label">Why do you want to join HDMODELS?</label>
                         <textarea id="motivation" class="form-input" rows="4" placeholder="Tell us about your modeling goals and why you want to work with our agency..."></textarea>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Availability *</label>
+                        <label for="availability" class="form-label">Availability *</label>
                         <select id="availability" class="form-input" required>
                             <option value="">Select availability</option>
                             <option value="Full-time">Full-time</option>

@@ -20,7 +20,7 @@
                 </div>
                 <div class="nav-icons">
                      <a href="login copy.html" class="nav-icon">👤</a>
-                    <a href="booking-history.html" class="nav-icon">📋</a>
+           
                 </div>
             </div>
         </nav>
@@ -28,7 +28,7 @@
         <!-- Model Category Header -->
         <div class="model-category-header">
             <h1>Premium Models</h1>
-            <p>High-end professional models for luxury campaigns - Starting at ₦200,000</p>
+            <p>High-end professional models for luxury campaigns</p>
         </div>
 
         <!-- Model Gallery -->
@@ -79,6 +79,7 @@
                                     <span class="measurement-label">Hair Color:</span>
                                     <span id="modalHairColor" class="measurement-value">Black</span>
                                 </div>
+                                 
                             </div>
                         </div>
                         <div class="model-shoot-types">
@@ -97,6 +98,110 @@
                                 <span id="modalTime" class="availability-value">9:00 AM - 6:00 PM</span>
                             </div>
                         </div>
+                          <div class="model-details-section">
+                    <h2 style="color:black">${model.name}</h2>
+                    <div class="model-measurements">
+                        <div class="measurement-row">
+                            <span>Height:</span> <span>${model.height}</span>
+                        </div>
+                        <div class="measurement-row">
+                            <span>Size:</span> <span>${model.size}</span>
+                        </div>
+                        <div class="measurement-row">
+                            <span>Bust:</span> <span>${model.bust}</span>
+                        </div>
+                        <div class="measurement-row">
+                            <span>Waist:</span> <span>${model.waist}</span>
+                        </div>
+                        <div class="measurement-row">
+                            <span>Hips:</span> <span>${model.hips}</span>
+                        </div>
+                        <div class="measurement-row">
+                            <span>Shoe Size:</span> <span>${model.shoeSize}</span>
+                        </div>
+                        <div class="measurement-row">
+                            <span>Hair Color:</span> <span>${model.hairColor}</span>
+                        </div>
+                        <div class="measurement-row">
+                            <span>Eye Color:</span> <span>${model.eyeColor}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="model-about">
+                        <h4>About ${model.name}</h4>
+                        <p>${model.about}</p>
+                    </div>
+                    
+                    <div class="model-availability">
+                        <h4>Availability</h4>
+                        <p>${model.availability}</p>
+                    </div>
+                    
+                
+                </div>
+                
+                <!-- Booking Form Section -->
+                <div class="booking-form-section">
+                    <h3 style="color:black">Book ${model.name}</h3>
+                    
+                    <!-- Shoot Type Selection -->
+                    <div class="shoot-types-selection">
+                        <h4>Select Shoot Type(s)</h4>
+                        ${model.shootTypes.map(type => `
+                            <div class="shoot-type-item">
+                                <label>
+                                    <input type="checkbox" name="shootType" value="${type}"> ${type}
+                                </label>
+                                <button style="color:black" type="button" class="expand-requirements" onclick="toggleRequirements ('${type.toLowerCase()}')">
+                                    ▼ Add Specific Requirements
+                                </button>
+                                <div id="${type.toLowerCase()}-requirements" class="requirements-box" style="display: none;">
+                                    <textarea placeholder="Add specific requirements for ${type} shoot..."></textarea>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <!-- Date and Time -->
+                    <div class="datetime-section">
+                        <div class="input-group">
+                            <label style="color:black;">Preferred Date</label>
+                            <input type="date" id="bookingDate" required>
+                        </div>
+            
+                        <div class="input-group">
+                            <label style="color:black;">Duration (hours)</label>
+                            <select id="bookingDuration">
+                                <option value="2">7-12 hours</option>
+                                <option value="4">8-1 hours</option>
+                                <option value="6">9-2 hours</option>
+                                <option value="6">10-3 hours</option>
+                                <option value="6">11-4 hours</option>
+                                <option value="6">12-5 hours</option>
+                                <option value="8">9-5 hours (Full Day)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Model Requirements -->
+                    <div class="model-requirements">
+                        <label style="color:black;">Additional Requirements for Model</label>
+                        <textarea id="modelRequirements" placeholder="Specify any special requirements, wardrobe, makeup style, etc."></textarea>
+                    </div>
+                    
+                    <!-- Booking Buttons -->
+                    <div class="booking-buttons">
+                        <button style="color:black "type="button" class="book-whatsapp" onclick="bookViaWhatsApp('${model.id}', '${category}')"> 📱 Book via WhatsApp</button>
+                           
+                        
+                        <button style="color:black" type="button" class="book-instagram" onclick="bookViaInstagram('${model.id}', '${category}')">   📷 Book via Instagram
+                        </button>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
                         <button class="book-model-btn" onclick="bookThisModel()">Book This Model</button>
                     </div>
                 </div>

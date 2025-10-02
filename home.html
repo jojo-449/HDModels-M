@@ -21,7 +21,7 @@
 
                 <div class="nav-icons">
                      <a href="login copy.html" class="nav-icon">👤</a>
-                    <span class="nav-icon">📋</span>
+                 
                 </div>
             </div>
         </nav>
@@ -33,5 +33,13 @@
        </div>
 
         <script src="script (1).js"></script>
+        <script>
+          // Redirect to signup if not logged in when site opens
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!userAuth.isLoggedIn()) {
+                window.location.href = 'login copy.html';
+            }
+        });
+        </script>
     </body>
 </html>

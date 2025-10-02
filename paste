@@ -146,3 +146,56 @@ function calculatePrice(category, duration) {
 
                              <p><strong>Interested in:</strong> ${applicationData.shootTypes?.join(', ') || 'Not specified'}</p>
         </div>
+
+
+
+        function bookViaWhatsApp(modelId, category) {
+    const model = window.currentModelForBooking;
+    const selectedShootTypes = Array.from(document.querySelectorAll('input[name="shootType"]:checked')).map(cb => cb.value);
+    const date = document.getElementById('bookingDate').value;
+    const time = document.getElementById('bookingTime').value;
+    const duration = document.getElementById('bookingDuration').value;
+    const requirements = document.getElementById('modelRequirements').value;
+    
+    // Collect specific requirements for each shoot type
+    let specificRequirements = '';
+    selectedShootTypes.forEach(type => {
+        const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
+        if (reqBox && reqBox.style.display === 'block') {
+            const reqText = reqBox.querySelector('textarea').value;
+            if (reqText) {
+                specificRequirements += `\n${type} Requirements: ${reqText}`;
+            }
+        }
+    });
+    
+    const bookingMessage = generateBookingMessage({
+        modelName: model.name,
+        modelCategory: category,
+        shootTypes: selectedShootTypes.join(', '),
+        date: date,
+        time: time,
+        duration: duration + ' hours',
+        requirements: requirements,
+        specificRequirements: specificRequirements,
+        clientName: userAuth.getCurrentUser()?.name || 'Client'
+    });
+    
+    const whatsappUrl = generateWhatsAppUrl('+2348146518310', bookingMessage);
+    window.open(whatsappUrl, '_blank');
+    
+    // Save booking to history
+    bookingManager.addBooking({
+        modelName: model.name,
+        modelCategory: category,
+        shootTypes: selectedShootTypes,
+        shootDate: date,
+        shootTime: time,
+        duration: duration + ' hours',
+        requirements: requirements,
+        specificRequirements: specificRequirements,
+        platform: 'WhatsApp'
+    });
+    
+    closeEnhancedModal();
+}
