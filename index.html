@@ -11,7 +11,7 @@
         <nav class="navbar" style="width: 1280px;">
             <div class="nav-container">
                 <div class="nav-links">
-                     <a href="home.html" class="nav-link">HOME-PAGE</a>
+                     <a href="index.html" class="nav-link">HOME-PAGE</a>
                     <a href="models.html" class="nav-link">MODEL</a>
                     <a href="booking-history.html" class="nav-link">BOOKINGS</a>
                     <a href="about.html" class="nav-link">ABOUT US</a>
@@ -32,14 +32,8 @@
        <source src="Video/WELCOME.mp4" type="video/mp4" > your browser does not support the video tag</video> 
        </div>
 
-        <script src="script (1).js"></script>
-        <script>
-          // Redirect to signup if not logged in when site opens
-        document.addEventListener('DOMContentLoaded', function() {
-            if (!userAuth.isLoggedIn()) {
-                window.location.href = 'login copy.html';
-            }
-        });
-        </script>
+      
+         <script src="auth.js"></script>
+          <script src="script (1).js"></script>
     </body>
 </html>

@@ -139,7 +139,7 @@ Thank you!`;
     const agencyWhatsApp = '2348146518310'; // Your WhatsApp number
     
     // Generate WhatsApp URL and open
-    const whatsappURL = generateWhatsAppURL(agencyWhatsApp, message);
+    const whatsappURL = generateWhatsAppURL('2348146518310', message);
     
     // Open WhatsApp
     window.open(whatsappURL, '_blank');
@@ -497,74 +497,8 @@ function sendModelApplicationToGmail(applicationData) {
     });
 }
 
-// User Authentication System
-class UserAuth {
-    constructor() {
-        this.currentUser = this.loadUserFromStorage();
-    }
 
-    login(whatsappNumber, businessInstagram) {
-        const user = {
-            whatsapp: formatPhoneNumber(whatsappNumber),
-            businessInstagram: businessInstagram,
-            loginTime: new Date().toISOString(),
-            id: this.generateUserId(whatsappNumber)
-        };
-        
-        localStorage.setItem('hdmodels_user', JSON.stringify(user));
-        this.currentUser = user;
-        return user;
-    }
 
-    logout() {
-        localStorage.removeItem('hdmodels_user');
-        localStorage.removeItem('hdmodels_bookings');
-        this.currentUser = null;
-    }
-
-    getCurrentUser() {
-        return this.currentUser;
-    }
-
-    isLoggedIn() {
-        return this.currentUser !== null;
-    }
-
-    loadUserFromStorage() {
-        const stored = localStorage.getItem('hdmodels_user');
-        return stored ? JSON.parse(stored) : null;
-    }
-
-    generateUserId(whatsappNumber) {
-        return btoa(whatsappNumber).replace(/[^a-zA-Z0-9]/g, '').substring(0, 8);
-    }
-}
-
-const userAuth = new UserAuth();
-
-// Login Form Handler
-function handleLogin(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(e.target);
-    const whatsappNumber = formData.get('loginWhatsapp');
-    const businessInstagram = formData.get('businessInstagram');
-    
-    if (!whatsappNumber || !businessInstagram) {
-        alert('Please fill in all required fields.');
-        return;
-    }
-    
-    if (!validateWhatsAppNumber(whatsappNumber)) {
-        alert('Please enter a valid WhatsApp number.');
-        return;
-    }
-    
-    const user = userAuth.login(whatsappNumber, businessInstagram);
-    alert(`Welcome! You are now logged in.`);
-    
-    window.location.href = 'booking-history.html';
-}
 
 // Booking Management System
 class BookingManager {
@@ -616,6 +550,8 @@ class BookingManager {
 
 const bookingManager = new BookingManager();
 
+document.addEventListener('DOMContentLoaded', initializeModelGallery);
+
 // MANUAL MODEL DATA - INPUT YOUR MODELS HERE
 const modelGalleryData = {
     basic: [
@@ -655,9 +591,9 @@ const modelGalleryData = {
             image: 'top models/WhatsApp Image 2025-06-13 at 22.22.05_27012135.jpg',
             additionalImages: [
                 'top models/WhatsApp Image 2025-09-15 at 22.23.01_ee3b4ffe.jpg',
-                'path/to/isabella-3.jpg',
-                'path/to/isabella-4.jpg',
-                'path/to/isabella-video.mp4'
+                // 'path/to/isabella-3.jpg',
+                // 'path/to/isabella-4.jpg',
+                // 'path/to/isabella-video.mp4'
             ],
             height: '5^3',
             size: 'uk-size 6/8',
@@ -677,10 +613,10 @@ const modelGalleryData = {
             name: 'Gold',
             image: 'top models/IMG_0721.JPG',
             additionalImages: [
-                '',
+                
                 'top models/IMG_0723.JPG',
-                'path/to/isabella-4.jpg',
-                'path/to/isabella-video.mp4'
+                // 'path/to/isabella-4.jpg',
+                // 'path/to/isabella-video.mp4'
             ],
             height: '5^10',
             size: '10/12',
@@ -885,9 +821,9 @@ const modelGalleryData = {
             image: 'top models/IMG_2306.JPG',
             additionalImages: [
                 'top models/IMG_2307.JPG',
-                'path/to/isabella-3.jpg',
-                'path/to/isabella-4.jpg',
-                'path/to/isabella-video.mp4'
+                // 'path/to/isabella-3.jpg',
+                // 'path/to/isabella-4.jpg',
+                // 'path/to/isabella-video.mp4'
             ],
             height: '5^5',
             size: '10',
@@ -903,14 +839,14 @@ const modelGalleryData = {
         },
 
         {
-            id: 'top_1',
+            id: 'top_31',
             name: 'Florence',
             image: 'top models/WhatsApp Image 2025-09-16 at 00.57.57_fd02d33b.jp',
             additionalImages: [
                 'top models/WhatsApp Image 2025-09-16 at 00.57.57_7fba98d6.jpg',
-                'path/to/isabella-3.jpg',
-                'path/to/isabella-4.jpg',
-                'path/to/isabella-video.mp4'
+                // 'path/to/isabella-3.jpg',
+                // 'path/to/isabella-4.jpg',
+                // 'path/to/isabella-video.mp4'
             ],
             height: '5^4',
             size: '10',
@@ -1344,10 +1280,10 @@ const modelGalleryData = {
             name: 'Amarachi',
             image: 'top models/girllllll.jpg',
             additionalImages: [
-                'path/to/isabella-2.jpg',
-                'path/to/isabella-3.jpg',
-                'path/to/isabella-4.jpg',
-                'path/to/isabella-video.mp4'
+                // 'path/to/isabella-2.jpg',
+                // 'path/to/isabella-3.jpg',
+                // 'path/to/isabella-4.jpg',
+                // 'path/to/isabella-video.mp4'
             ],
             height: '5^10',
             size: '10',
@@ -1399,8 +1335,8 @@ const modelGalleryData = {
             additionalImages: [
                 'Elitemodels/IMG_5451.JPG',
                 'Elitemodels/IMG_5449.JPG',
-                'path/to/anastasia-4.jpg',
-                'path/to/anastasia-video.mp4'
+                // 'path/to/anastasia-4.jpg',
+                // 'path/to/anastasia-video.mp4'
             ],
             height: '5^11',
             size: '14',
@@ -1472,9 +1408,9 @@ const modelGalleryData = {
          {
            id: 'premium_1',
             name: 'Temiloluwa',
-            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.05_733d8200.jpg',
+            image: '',
             additionalImages: [
-                'top models/model1.jpg',
+                // 'top models/model1.jpg',
                 '',
                 '',
                 ''
@@ -1826,69 +1762,55 @@ function toggleRequirements(shootType) {
 }
 
 function bookViaWhatsApp(modelId, category) {
-    const model = window.currentModelForBooking;
-    const selectedShootTypes = Array.from(document.querySelectorAll('input[name="shootType"]:checked')).map(cb => cb.value);
-    const date = document.getElementById('bookingDate').value;
-    const time = document.getElementById('bookingTime').value;
-    const duration = document.getElementById('bookingDuration').value;
-    const requirements = document.getElementById('modelRequirements').value;
-    
-    // Collect specific requirements for each shoot type
-    let specificRequirements = '';
-    selectedShootTypes.forEach(type => {
-        const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
-        if (reqBox && reqBox.style.display === 'block') {
-            const reqText = reqBox.querySelector('textarea').value;
-            if (reqText) {
-                specificRequirements += `\n${type} Requirements: ${reqText}`;
-            }
-        }
-    });
-    
-    const bookingMessage = generateBookingMessage({
-        modelName: model.name,
-        modelCategory: category,
-        shootTypes: selectedShootTypes.join(', '),
-        date: date,
-        time: time,
-        duration: duration + ' hours',
-        requirements: requirements,
-        specificRequirements: specificRequirements,
-        clientName: userAuth.getCurrentUser()?.name || 'Client'
-    });
-    
-    const whatsappUrl = generateWhatsAppUrl(+2348146518310, bookingMessage);
-    console.log("Booking message:", bookingMessage);
-    console.log("WhatsApp URL:", wa.me/2348146518310);
-    window.open(whatsappUrl, '_blank');
-    
-    // Save booking to history
-    bookingManager.addBooking({
-        modelName: model.name,
-        modelCategory: category,
-        shootTypes: selectedShootTypes,
-        shootDate: date,
-        shootTime: time,
-        duration: duration + ' hours',
-        requirements: requirements,
-        specificRequirements: specificRequirements,
-        platform: 'WhatsApp'
-    });
-    
-    closeEnhancedModal();
-}
+const model = window.currentModelForBooking;
+const selectedShootTypes = Array.from(document.querySelectorAll('input[name="shootType"]:checked')).map(cb => cb.value);
+const date = document.getElementById('bookingDate').value;
+const time = document.getElementById('bookingTime').value;
+const duration = document.getElementById('bookingDuration').value;
+const requirements = document.getElementById('modelRequirements').value;
 
-function generateBookingMessage(details) {
-    return `Hi! I'd like to book ${details.modelName} (${details.modelCategory} model).
+let specificRequirements = '';
+selectedShootTypes.forEach(type => {
+  const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
+  if (reqBox && reqBox.style.display === 'block') {
+    const reqText = reqBox.querySelector('textarea').value;
+    if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+  }
+});
 
-📅 Date: ${details.date}
-⏰ Time: ${details.time}
-⏱ Duration: ${details.duration}
-🎬 Shoot Type(s): ${details.shootTypes}
-📝 Requirements: ${details.requirements}
-${details.specificRequirements}
+const bookingMessage = `Hi! I'd like to book ${model.name} (${category} model).
 
-Client: ${details.clientName}`;
+📅 Date: ${date}
+⏰ Time: ${time}
+⌛ Duration: ${duration} hours
+🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
+📝 Requirements: ${requirements}
+${specificRequirements}
+Client: ${userAuth.getCurrentUser()?.name || 'Client'}`;
+
+navigator.clipboard.writeText(bookingMessage).then(() => {
+  alert('Booking details copied! WhatsApp will open now.');
+  const whatsappUrl = `https://wa.me/8146518310?text=${encodeURIComponent(bookingMessage)}`;
+  window.open(whatsappUrl, '_blank');
+}).catch(() => {
+  alert('Could not copy text automatically. Opening WhatsApp...');
+  const whatsappUrl = `https://wa.me/2348146518310?text=${encodeURIComponent(bookingMessage)}`;
+  window.open(whatsappUrl, '_blank');
+});
+
+bookingManager.addBooking({
+  modelName: model.name,
+  modelCategory: category,
+  shootTypes: selectedShootTypes,
+  shootDate: date,
+  shootTime: time,
+  duration: duration + ' hours',
+  requirements: requirements,
+  specificRequirements: specificRequirements,
+  platform: 'WhatsApp'
+});
+
+closeEnhancedModal();
 }
 
 
@@ -1950,122 +1872,6 @@ Client: ${userAuth.getCurrentUser()?.name || 'Client'}`;
     closeEnhancedModal();
 }
 
-// Signup Form Handler - Added for user authentication system
-function handleSignup(e) {
-    e.preventDefault();
-    
-    const instagramHandle = document.getElementById('signupInstagram').value;
-    const whatsappNumber = document.getElementById('signupWhatsapp').value;
-    const password = document.getElementById('signupPassword').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-    
-    // Clear previous errors
-    document.getElementById('instagramError').style.display = 'none';
-    document.getElementById('whatsappError').style.display = 'none';
-    document.getElementById('passwordError').style.display = 'none';
-    document.getElementById('confirmPasswordError').style.display = 'none';
-    
-    let hasErrors = false;
-    
-    // Validate Instagram handle
-    if (!instagramHandle) {
-        document.getElementById('instagramError').textContent = 'Business Instagram handle is required';
-        document.getElementById('instagramError').style.display = 'block';
-        hasErrors = true;
-    } else if (!validateInstagramHandle(instagramHandle)) {
-        document.getElementById('instagramError').textContent = 'Please enter a valid Instagram handle (e.g., @your_business)';
-        document.getElementById('instagramError').style.display = 'block';
-        hasErrors = true;
-    }
-    
-    // Validate WhatsApp number
-    if (!whatsappNumber) {
-        document.getElementById('whatsappError').textContent = 'WhatsApp number is required';
-        document.getElementById('whatsappError').style.display = 'block';
-        hasErrors = true;
-    } else if (!validateWhatsAppNumber(whatsappNumber)) {
-        document.getElementById('whatsappError').textContent = 'Please enter a valid WhatsApp number (10-15 digits)';
-        document.getElementById('whatsappError').style.display = 'block';
-        hasErrors = true;
-    }
-    
-    // Validate password
-    if (!password) {
-        document.getElementById('passwordError').textContent = 'Password is required';
-        document.getElementById('passwordError').style.display = 'block';
-        hasErrors = true;
-    } else if (!validatePassword(password)) {
-        document.getElementById('passwordError').textContent = 'Password must be at least 6 characters long';
-        document.getElementById('passwordError').style.display = 'block';
-        hasErrors = true;
-    }
-    
-    // Validate confirm password
-    if (!confirmPassword) {
-        document.getElementById('confirmPasswordError').textContent = 'Please confirm your password';
-        document.getElementById('confirmPasswordError').style.display = 'block';
-        hasErrors = true;
-    } else if (password !== confirmPassword) {
-        document.getElementById('confirmPasswordError').textContent = 'Passwords do not match';
-        document.getElementById('confirmPasswordError').style.display = 'block';
-        hasErrors = true;
-    }
-    
-    if (hasErrors) {
-        return;
-    }
-    
-    const result = userAuth.signup(instagramHandle, whatsappNumber, password);
-    
-    if (result.success) {
-        alert('Account created successfully! Please login to continue.');
-        window.location.href = 'login.html';
-    } else {
-        alert('Failed to create account: ' + result.message);
-    }
-}
-
-// Login Form Handler - Added for user authentication system
-function handleLogin(e) {
-    e.preventDefault();
-    
-    const identifier = document.getElementById('loginIdentifier').value;
-    const password = document.getElementById('loginPassword').value;
-    
-    // Clear previous errors
-    document.getElementById('identifierError').style.display = 'none';
-    document.getElementById('loginPasswordError').style.display = 'none';
-    
-    let hasErrors = false;
-    
-    // Validate identifier
-    if (!identifier) {
-        document.getElementById('identifierError').textContent = 'Instagram handle or WhatsApp number is required';
-        document.getElementById('identifierError').style.display = 'block';
-        hasErrors = true;
-    }
-    
-    // Validate password
-    if (!password) {
-        document.getElementById('loginPasswordError').textContent = 'Password is required';
-        document.getElementById('loginPasswordError').style.display = 'block';
-        hasErrors = true;
-    }
-    
-    if (hasErrors) {
-        return;
-    }
-    
-    const result = userAuth.login(identifier, password);
-    
-    if (result.success) {
-        alert('Welcome! You are now logged in.');
-        window.location.href = 'index.html';
-    } else {
-        alert('Login failed: ' + result.message);
-    }
-}
-// ===== END OF SIGNUP & LOGIN AUTHENTICATION SYSTEM =====
 
 // Booking History Functions
 function initializeBookingHistory() {
