@@ -576,8 +576,8 @@ const modelGalleryData = {
             eyeColor: 'Hazel',
             about: 'Professional model with 2 years experience in fashion and beauty shoots.',
             shootTypes: ['Fashion', 'Beauty', 'Skincare'],
-            price: '₦50,000 - ₦75,000',
-            availability: 'Monday - Friday: 9AM - 6PM'
+            
+            
         }
         // ADD MORE MODELS BY COPYING THE STRUCTURE ABOVE
     ],
@@ -604,7 +604,7 @@ const modelGalleryData = {
             hairColor: 'ginger-natural',
             eyeColor: 'dark-brown',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen','Skin-care'],
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen','Brand'],
             // availability: 'Monday - Saturday: 10AM - 8PM'
         },
 
@@ -627,7 +627,7 @@ const modelGalleryData = {
             hairColor: 'color-2(relaxed)',
             eyeColor: 'brown',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen','Skin-care'],
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen','Brand'],
             // availability: 'Monday - Saturday: 10AM - 8PM'
         },
         
@@ -650,8 +650,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+           
         },
 
         {
@@ -672,8 +672,8 @@ const modelGalleryData = {
            hairColor: 'Black(relaxed)',
            eyeColor: 'Black', 
            about: 'My name is funmibi, I’m a student and a face model.  I’m very passionate about modeling and how to even becoming more better in the career, and with the help of HDMODELS I’ve been able to work and also learn to perfect my skills',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+           
             
         },
 
@@ -696,8 +696,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+          
         },
 
         {
@@ -719,8 +719,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+           
         },
 
         {
@@ -743,7 +743,7 @@ const modelGalleryData = {
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+           
         },
 
         {
@@ -765,8 +765,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+            
         },
 
         {
@@ -788,8 +788,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+          
         },
 
          {
@@ -811,8 +811,8 @@ const modelGalleryData = {
             hairColor: '..',
             eyeColor: '..',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+            
         },
 
          {
@@ -834,8 +834,8 @@ const modelGalleryData = {
             hairColor: 'Black',
             eyeColor: 'Black(Natural)',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.Been modelling for monts now and it has been going well!.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+           
         },
 
         {
@@ -857,8 +857,8 @@ const modelGalleryData = {
             hairColor: 'Black(Natural)',
             eyeColor: 'Dark Brown',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+            
         },
 
         {
@@ -880,8 +880,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+           
         },
 
         {
@@ -903,8 +903,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+         
         },
 
         {
@@ -926,8 +926,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+           
         },
 
          {
@@ -948,8 +948,8 @@ const modelGalleryData = {
            shoeSize:'37-38"',
            eyeColor: 'Brown', 
            about: 'BLESSING ADAEZE MICEAL>>AE:20>>NATIONALITY:NIERIA>>SATE OF ORIIN:ABIA STATE>>I have worked on commercial,print and event campaigns for several brands,i enjoy working with brands that',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-             availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+            
             
         },
 
@@ -972,8 +972,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+           
         },
 
         {
@@ -995,8 +995,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+            
         },
 
         {
@@ -1018,8 +1018,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+           
         },
 
         {
@@ -1041,8 +1041,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+           
         },
 
         {
@@ -1064,8 +1064,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+           
         },
 
         {
@@ -1087,8 +1087,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+           
         },
 
         {
@@ -1110,8 +1110,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+           
         },
 
         {
@@ -1133,8 +1133,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+          
         },
 
         {
@@ -1156,8 +1156,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+        
         },
 
         {
@@ -1179,8 +1179,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+            
         },
 
         {
@@ -1202,8 +1202,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+         
         },
 
         {
@@ -1225,8 +1225,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+            
         },
 
         {
@@ -1248,8 +1248,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+            
         }, 
 
        {
@@ -1271,8 +1271,8 @@ const modelGalleryData = {
             hairColor: '...',
             eyeColor: '...',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
-            availability: 'Monday - Saturday: 10AM - 8PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
+          
         },
 
         {
@@ -1294,7 +1294,7 @@ const modelGalleryData = {
             hairColor: 'dark-brown/realxed',
             eyeColor: 'dark-brown',
             about: 'My name is Amarachi and I^m a 19 year old commercial and face model under Hd models based between Lagos and Enugu Currently in university,I bring a clean,expressive look and on-camera, confidence to beauty, lifestyle and brand campaigns',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Skin-care'],
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
             // availability: 'Monday - Saturday: 10AM - 8PM'
         },
 
@@ -1323,9 +1323,9 @@ const modelGalleryData = {
             hairColor: 'Auburn',
             eyeColor: 'Green',
             about: 'Elite supermodel with international campaign experience and runway expertise.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-            price: '₦500,000 - ₦1,000,000',
-            availability: 'By Appointment: 12PM - 10PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+            
+           
         },
         // ADD MORE MODELS HERE
          {
@@ -1347,9 +1347,8 @@ const modelGalleryData = {
             hairColor: 'Black',
             eyeColor: 'Brown',
             about: 'Elite supermodel with international campaign experience and runway expertise.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-            price: '₦500,000 - ₦1,000,000',
-            availability: 'By Appointment: 12PM - 10PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+          
         },
 
         {
@@ -1371,9 +1370,8 @@ const modelGalleryData = {
             hairColor: 'Brown',
             eyeColor: 'Brown',
             about: 'I started modeling professionally this year and have worked with a range of brands across fashion and beauty. I’m passionate about bringing creative ideas to life through visuals and enjoy being part of teams that value quality and expression.I love modeling because it allows me to express different moods, styles, and stories  and I’m always looking to grow, learn, and bring value to any project I’m part of.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-            price: '₦500,000 - ₦1,000,000',
-            availability: 'By Appointment: 12PM - 10PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+          
         },
     ],
 
@@ -1399,7 +1397,7 @@ const modelGalleryData = {
             hairColor: 'Auburn',
             eyeColor: 'Green',
             about: 'Elite supermodel with international campaign experience and runway expertise.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
             // price: '₦500,000 - ₦1,000,000',
             // availability: 'By Appointment: 12PM - 10PM'
         },
@@ -1424,9 +1422,8 @@ const modelGalleryData = {
             hairColor: 'Black(relaxed)',
            eyeColor: 'Deep Brown', 
            about: '',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-            price: '₦500,000 - ₦1,000,000',
-            availability: 'By Appointment: 12PM - 10PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+         
             
         },
 
@@ -1449,9 +1446,8 @@ const modelGalleryData = {
           hairColor: 'Black(relaxed)',
            eyeColor: 'Black', 
            about: '',
-             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-            price: '₦500,000 - ₦1,000,000',
-            availability: 'By Appointment: 12PM - 10PM'
+             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+          
             
         },
 
@@ -1474,9 +1470,8 @@ const modelGalleryData = {
           hairColor: 'Black(relaxed)',
            eyeColor: 'Black', 
            about: 'My name is Olatunbosun Rejoice, I^m 19 years old and still a student . I have started my modelling career since 2022 till date. I am a face and fashion model . I am a model under Honey drop modelling agency since 2023.',
-             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-            price: '₦500,000 - ₦1,000,000',
-            availability: 'By Appointment: 12PM - 10PM'
+             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+           
             
         },
 
@@ -1499,9 +1494,8 @@ const modelGalleryData = {
           hairColor: 'Brown(relaxed)',
            eyeColor: 'Black', 
            about: 'My name is Olatunbosun Rejoice, I^m 19 years old and still a student . I have started my modelling career since 2022 till date. I am a face and fashion model . I am a model under Honey drop modelling agency since 2023.',
-             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-            price: '₦500,000 - ₦1,000,000',
-            availability: 'By Appointment: 12PM - 10PM'
+             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+          
             
         },
 
@@ -1524,9 +1518,8 @@ const modelGalleryData = {
           hairColor: 'Black(relaxed)',
            eyeColor: 'Brown', 
            about: '',
-             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-            price: '₦500,000 - ₦1,000,000',
-            availability: 'By Appointment: 12PM - 10PM'
+             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+           
         },
 
         {
@@ -1548,8 +1541,9 @@ const modelGalleryData = {
           hairColor: 'Brown(relaxed)',
            eyecolor: 'Dark Brown', 
            about: 'Well, I’m Feyi a fashion designer and model. I love creating and also being in front of the camera. Modeling has given me the chance to express myself in different ways and it’s helped me grow so much.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Lingerie', 'Video Vixen'],
-            availability: 'By Appointment: 12PM - 10PM'
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand',
+               'Video Vixen'],
+           
             
            
         },
@@ -1642,7 +1636,7 @@ function openModelModal(modelId, category) {
                     </div>
                     
                     <div class="model-about">
-                        <h4>About ${model.name}</h4>
+                        <h4>Abou ${model.name}</h4>
                         <p>${model.about}</p>
                     </div>
                     
@@ -1662,18 +1656,37 @@ function openModelModal(modelId, category) {
                     <div class="shoot-types-selection">
                         <h4>Select Shoot Type(s)</h4>
                         ${model.shootTypes.map(type => `
-                            <div class="shoot-type-item">
-                                <label>
-                                    <input type="checkbox" name="shootType" value="${type}"> ${type}
-                                </label>
-                                <button style="color:black" type="button" class="expand-requirements" onclick="toggleRequirements ('${type.toLowerCase()}')">
-                                    ▼ Add Specific Requirements
-                                </button>
-                                <div id="${type.toLowerCase()}-requirements" class="requirements-box" style="display: none;">
-                                    <textarea placeholder="Add specific requirements for ${type} shoot..."></textarea>
-                                </div>
-                            </div>
-                        `).join('')}
+  <div class="shoot-type-item">
+    <label>
+      <input type="checkbox" name="shootType" value="${type}"> ${type}
+    </label>
+
+    <button style="color:black" type="button" class="expand-requirements" onclick="toggleRequirements('${type.toLowerCase()}')">
+      + Add Specific Requirements
+    </button>
+
+    <div id="${type.toLowerCase()}-requirements" class="requirements-box" style="display:none;">
+      <textarea placeholder="Add specific requirements for ${type} shoot..."></textarea>
+
+      ${['Fashion', 'Brand'].includes(type)
+        ? `
+          <div class="duration-section" style="margin-top:10px;">
+            <h5 style="color:black;">Select Duration</h5>
+            <label style="display:block; margin-bottom:5px;">
+              <input type="radio" name="${type.toLowerCase()}-duration" value="full-day">
+              Full Day (9 AM – 5 PM)
+            </label>
+            <label style="display:block;">
+              <input type="radio" name="${type.toLowerCase()}-duration" value="5-hours">
+              5 Hours
+            </label>
+          </div>
+        `
+        : ''
+      }
+    </div>
+  </div>
+`).join('')}
                     </div>
                     
                     <!-- Date and Time -->
@@ -1690,18 +1703,7 @@ function openModelModal(modelId, category) {
 
                         
             
-                        <div class="input-group">
-                            <label style="color:black;">Duration (hours)</label>
-                            <select id="bookingDuration">
-                                <option value="2">7-12 hours</option>
-                                <option value="4">8-1 hours</option>
-                                <option value="6">9-2 hours</option>
-                                <option value="6">10-3 hours</option>
-                                <option value="6">11-4 hours</option>
-                                <option value="6">12-5 hours</option>
-                                <option value="8">9-5 hours (Full Day)</option>
-                            </select>
-                        </div>
+                       
                     </div>
                     
                     <!-- Model Requirements -->
@@ -1760,118 +1762,279 @@ function toggleRequirements(shootType) {
         button.textContent = '▼ Add Specific Requirements';
     }
 }
+// function bookViaWhatsApp(modelId, category) {
+//   const model = window.currentModelForBooking;
+//   const selectedShootTypes = Array.from(document.querySelectorAll('input[name="shootType"]:checked')).map(cb => cb.value);
+//   const date = document.getElementById('bookingDate').value || 'N/A';
+//   const time = document.getElementById('bookingTime').value || 'N/A';
+//   const durationInput = document.getElementById('bookingDuration');
+//   const duration = durationInput ? durationInput.value : 'N/A';
+//   const requirements = document.getElementById('modelRequirements').value || 'N/A';
+  
+//   // ✅ Get logged-in client handle
+//   const clientHandle = userAuth.getCurrentUser()?.username || 'Unknown';
+
+//   // ✅ Collect any specific requirements
+//   let specificRequirements = '';
+//   selectedShootTypes.forEach(type => {
+//     const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
+//     if (reqBox && reqBox.style.display === 'block') {
+//       const reqText = reqBox.querySelector('textarea').value;
+//       if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+//     }
+//   });
+
+//   // ✅ Message format
+//   const bookingMessage = `Hi! I'd like to book ${model.name} (${category} model).
+
+// 📅 Date: ${date}
+// ⏰ Time: ${time}
+// ⌛ Duration: ${duration} hours
+// 🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
+// 📝 Requirements: ${requirements}
+// ${specificRequirements}
+// Client: @${clientHandle}`;
+
+// // ✅ Copy to clipboard (after opening)
+//   navigator.clipboard.writeText(bookingMessage).then(() => {
+//     alert('Booking details copied! WhatsApp opened successfully.');
+//   }).catch(() => {
+//     alert('Could not copy text automatically. WhatsApp opened.');
+//   });
+
+//   // ✅ Your official WhatsApp business short link (replace this with yours)
+//   const whatsappUrl = `https://wa.me/2348146518310?text=${encodeURIComponent(bookingMessage)}`;
+
+//   // ✅ Open WhatsApp first (avoids browser blocking)
+//   window.open(whatsappUrl, '_blank');
+
+  
+
+//   // ✅ Save to booking history
+//   bookingManager.addBooking({
+//     clientInstagram: '@' + clientHandle,
+//     modelName: model.name,
+//     modelCategory: category,
+//     shootTypes: selectedShootTypes,
+//     shootDate: date,
+//     shootTime: time,
+//     duration: duration + ' hours',
+//     requirements: requirements,
+//     specificRequirements: specificRequirements,
+//     platform: 'WhatsApp'
+//   });
+
+//   closeEnhancedModal();
+// }
 
 function bookViaWhatsApp(modelId, category) {
-const model = window.currentModelForBooking;
-const selectedShootTypes = Array.from(document.querySelectorAll('input[name="shootType"]:checked')).map(cb => cb.value);
-const date = document.getElementById('bookingDate').value;
-const time = document.getElementById('bookingTime').value;
-const duration = document.getElementById('bookingDuration').value;
-const requirements = document.getElementById('modelRequirements').value;
+  const model = window.currentModelForBooking;
+  const selectedShootTypes = Array.from(
+    document.querySelectorAll('input[name="shootType"]:checked')
+  ).map(cb => cb.value);
 
-let specificRequirements = '';
-selectedShootTypes.forEach(type => {
-  const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
-  if (reqBox && reqBox.style.display === 'block') {
-    const reqText = reqBox.querySelector('textarea').value;
-    if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+  // ✅ Collect form inputs safely
+  const date = document.getElementById('bookingDate')?.value || 'N/A';
+  const time = document.getElementById('bookingTime')?.value || 'N/A';
+  const requirements = document.getElementById('modelRequirements')?.value.trim() || 'None specified';
+
+  // ✅ Duration (works for dropdown or radio)
+  let duration = 'N/A';
+  const selectEl = document.querySelector('select[id$="-duration-select"]');
+  const radioEl = document.querySelector('input[type="radio"][name$="-duration"]:checked');
+  if (selectEl && selectEl.value) {
+    duration = selectEl.value === 'fullday' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
+  } else if (radioEl && radioEl.value) {
+    duration = radioEl.value === 'full-day' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
   }
-});
 
-const bookingMessage = `Hi! I'd like to book ${model.name} (${category} model).
+  // ✅ Specific requirements
+  let specificRequirements = '';
+  selectedShootTypes.forEach(type => {
+    const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
+    if (reqBox && reqBox.style.display === 'block') {
+      const reqText = reqBox.querySelector('textarea').value;
+      if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+    }
+  });
+
+  // ✅ Client IG handle (works even if key has space)
+  let clientHandle = 'Client';
+  const savedUser = JSON.parse(
+    localStorage.getItem('currentUser') || localStorage.getItem('currentUser ') || '{}'
+  );
+  if (savedUser.username) clientHandle = savedUser.username;
+  else if (savedUser.instagram) clientHandle = savedUser.instagram;
+  else if (savedUser.name) clientHandle = savedUser.name;
+
+  // ✅ WhatsApp message
+  const bookingMessage = `Hi! I'd like to book ${model.name} (${category} model).
 
 📅 Date: ${date}
 ⏰ Time: ${time}
-⌛ Duration: ${duration} hours
+⌛ Duration: ${duration}
 🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
 📝 Requirements: ${requirements}
 ${specificRequirements}
-Client: ${userAuth.getCurrentUser()?.name || 'Client'}`;
+Client: @${clientHandle}`;
 
-navigator.clipboard.writeText(bookingMessage).then(() => {
-  alert('Booking details copied! WhatsApp will open now.');
-  const whatsappUrl = `https://wa.me/8146518310?text=${encodeURIComponent(bookingMessage)}`;
-  window.open(whatsappUrl, '_blank');
-}).catch(() => {
-  alert('Could not copy text automatically. Opening WhatsApp...');
+  // ✅ Open WhatsApp
   const whatsappUrl = `https://wa.me/2348146518310?text=${encodeURIComponent(bookingMessage)}`;
   window.open(whatsappUrl, '_blank');
-});
 
-bookingManager.addBooking({
-  modelName: model.name,
-  modelCategory: category,
-  shootTypes: selectedShootTypes,
-  shootDate: date,
-  shootTime: time,
-  duration: duration + ' hours',
-  requirements: requirements,
-  specificRequirements: specificRequirements,
-  platform: 'WhatsApp'
-});
+  // ✅ Save booking
+  bookingManager.addBooking({
+    clientInstagram: '@' + clientHandle,
+    modelName: model.name,
+    modelCategory: category,
+    shootTypes: selectedShootTypes,
+    shootDate: date,
+    shootTime: time,
+    duration: duration,
+    requirements: requirements,
+    specificRequirements: specificRequirements,
+    platform: 'WhatsApp'
+  });
 
-closeEnhancedModal();
+  closeEnhancedModal();
 }
+
+// function bookViaInstagram(modelId, category) {
+//   const model = window.currentModelForBooking;
+//   const selectedShootTypes = Array.from(document.querySelectorAll('input[name="shootType"]:checked')).map(cb => cb.value);
+//   const date = document.getElementById('bookingDate').value || 'N/A';
+//   const time = document.getElementById('bookingTime').value || 'N/A';
+//   const durationInput = document.getElementById('bookingDuration');
+//   const duration = durationInput ? durationInput.value : 'N/A';
+//   const requirements = document.getElementById('modelRequirements').value || 'N/A';
+//   const savedUser = JSON.parse(localStorage.getItem('newUser')) || {};
+// const clientHandle =
+//   savedUser.username ||
+//   savedUser.name ||
+//   savedUser.instagram ||
+//   savedUser.handle ||
+//   'Unknown';
+
+//   // ✅ Collect specific requirements
+//   let specificRequirements = '';
+//   selectedShootTypes.forEach(type => {
+//     const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
+//     if (reqBox && reqBox.style.display === 'block') {
+//       const reqText = reqBox.querySelector('textarea').value;
+//       if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+//     }
+//   });
+
+//   // ✅ Message to send
+//   const bookingDetails = `Model Booking Request:
+
+// 👩‍🎤 Model: ${model.name} (${category})
+// 📅 Date: ${date}
+// ⏰ Time: ${time}
+// ⌛ Duration: ${duration} hours
+// 🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
+// 📝 Requirements: ${requirements}
+// ${specificRequirements}
+
+// Client: @${clientHandle}`;
+
+//   // ✅ Copy to clipboard, then open Instagram
+//   navigator.clipboard.writeText(bookingDetails).then(() => {
+//     alert('Booking details copied! Redirecting to Instagram...');
+//     window.open("https://www.instagram.com/hdmodels.co/", "_blank"); // ← Your real agency IG link
+//   }).catch(() => {
+//     alert('Please copy this booking information and send it via Instagram DM:\n\n' + bookingDetails);
+//     window.open("https://www.instagram.com/hdmodels.co/", "_blank"); // same link for fallback
+//   });
+
+//   // ✅ Save to booking history
+//   bookingManager.addBooking({
+//     clientInstagram: '@' + clientHandle,
+//     modelName: model.name,
+//     modelCategory: category,
+//     shootTypes: selectedShootTypes,
+//     shootDate: date,
+//     shootTime: time,
+//     duration: duration + ' hours',
+//     requirements: requirements,
+//     specificRequirements: specificRequirements,
+//     platform: 'Instagram'
+//   });
+
+//   closeEnhancedModal();
+// }
 
 
 function bookViaInstagram(modelId, category) {
-    const model = window.currentModelForBooking;
-    const selectedShootTypes = Array.from(document.querySelectorAll('input[name="shootType"]:checked')).map(cb => cb.value);
-    const date = document.getElementById('bookingDate').value;
-    const time = document.getElementById('bookingTime').value;
-    const duration = document.getElementById('bookingDuration').value;
-    const requirements = document.getElementById('modelRequirements').value;
-    
-    // Collect specific requirements for each shoot type
-    let specificRequirements = '';
-    selectedShootTypes.forEach(type => {
-        const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
-        if (reqBox && reqBox.style.display === 'block') {
-            const reqText = reqBox.querySelector('textarea').value;
-            if (reqText) {
-                specificRequirements += `\n${type} Requirements: ${reqText}`;
-            }
-        }
-    });
-    
-    const bookingDetails = `Model Booking Request:
-Model: ${model.name} (${category})
-Shoot Types: ${selectedShootTypes.join(', ')}
-Date: ${date}
-Time: ${time}
-Duration: ${duration} hours
-Requirements: ${requirements}${specificRequirements}
-Client: ${userAuth.getCurrentUser()?.name || 'Client'}`;
-    
-    // Copy to clipboard and redirect to Instagram
-    navigator.clipboard.writeText(bookingDetails).then(() => {
-        alert('Booking details copied to clipboard! You will now be redirected to Instagram to send the message.');
-        const user = userAuth.getCurrentUser();
-        const instagramHandle = user?.businessInstagram || 'hdmodels.co';
-        window.open(`https://www.instagram.com/_hdmodels?igsh=ajdvbDd3NzA4d202${instagramHandle.replace('@', '')}/`, '_blank');
-    }).catch(() => {
-        alert('Please copy this booking information and send it via Instagram DM:\n\n' + bookingDetails);
-        const user = userAuth.getCurrentUser();
-        const instagramHandle = user?.businessInstagram || 'hdmodelsagency';
-        window.open(`https://www.instagram.com/_hdmodels?igsh=ajdvbDd3NzA4d202${instagramHandle.replace('@', '')}/`, '_blank');
-    });
-    
-    // Save booking to history
-    bookingManager.addBooking({
-        modelName: model.name,
-        modelCategory: category,
-        shootTypes: selectedShootTypes,
-        shootDate: date,
-        shootTime: time,
-        duration: duration + ' hours',
-        requirements: requirements,
-        specificRequirements: specificRequirements,
-        platform: 'Instagram'
-    });
-    
-    closeEnhancedModal();
-}
+  const model = window.currentModelForBooking;
+  const selectedShootTypes = Array.from(
+    document.querySelectorAll('input[name="shootType"]:checked')
+  ).map(cb => cb.value);
 
+  const date = document.getElementById('bookingDate')?.value || 'N/A';
+  const time = document.getElementById('bookingTime')?.value || 'N/A';
+  const requirements = document.getElementById('modelRequirements')?.value.trim() || 'None specified';
+
+  let duration = 'N/A';
+  const selectEl = document.querySelector('select[id$="-duration-select"]');
+  const radioEl = document.querySelector('input[type="radio"][name$="-duration"]:checked');
+  if (selectEl && selectEl.value) {
+    duration = selectEl.value === 'fullday' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
+  } else if (radioEl && radioEl.value) {
+    duration = radioEl.value === 'full-day' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
+  }
+
+  let specificRequirements = '';
+  selectedShootTypes.forEach(type => {
+    const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
+    if (reqBox && reqBox.style.display === 'block') {
+      const reqText = reqBox.querySelector('textarea').value;
+      if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+    }
+  });
+
+  let clientHandle = 'Client';
+  const savedUser = JSON.parse(
+    localStorage.getItem('currentUser') || localStorage.getItem('currentUser ') || '{}'
+  );
+  if (savedUser.username) clientHandle = savedUser.username;
+  else if (savedUser.instagram) clientHandle = savedUser.instagram;
+  else if (savedUser.name) clientHandle = savedUser.name;
+
+  const bookingDetails = `Model Booking Request:
+
+👩‍🎤 Model: ${model.name} (${category})
+📅 Date: ${date}
+⏰ Time: ${time}
+⌛ Duration: ${duration}
+🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
+📝 Requirements: ${requirements}
+${specificRequirements}
+Client: @${clientHandle}`;
+
+  navigator.clipboard.writeText(bookingDetails).then(() => {
+    alert('Booking details copied! Redirecting to Instagram...');
+    window.open("https://www.instagram.com/hdmodels.co/", "_blank");
+  }).catch(() => {
+    alert('Please copy and send via Instagram DM:\n\n' + bookingDetails);
+    window.open("https://www.instagram.com/hdmodels.co/", "_blank");
+  });
+
+  bookingManager.addBooking({
+    clientInstagram: '@' + clientHandle,
+    modelName: model.name,
+    modelCategory: category,
+    shootTypes: selectedShootTypes,
+    shootDate: date,
+    shootTime: time,
+    duration: duration,
+    requirements: requirements,
+    specificRequirements: specificRequirements,
+    platform: 'Instagram'
+  });
+
+  closeEnhancedModal();
+}
 
 // Booking History Functions
 function initializeBookingHistory() {
@@ -1902,38 +2065,24 @@ function initializeBookingHistory() {
 
 function renderBookingHistory(bookings) {
     const bookingsList = document.getElementById('bookingsList');
-    
-    bookingsList.innerHTML = bookings.map(booking => `
-        <div class="booking-item">
-            <div class="booking-header">
-                <span class="booking-id">Booking #${booking.id}</span>
-                <span class="booking-status status-${booking.status}">${booking.status}</span>
-            </div>
-            <div class="booking-details">
-                <div class="booking-detail">
-                    <div class="booking-detail-label">Model Category</div>
-                    <div class="booking-detail-value">${booking.modelCategory || 'N/A'}</div>
-                </div>
-                <div class="booking-detail">
-                    <div class="booking-detail-label">Shoot Date</div>
-                    <div class="booking-detail-value">${booking.shootDate || 'N/A'}</div>
-                </div>
-                <div class="booking-detail">
-                    <div class="booking-detail-label">Duration</div>
-                    <div class="booking-detail-value">${booking.duration || 'N/A'}</div>
-                </div>
-                <div class="booking-detail">
-                    <div class="booking-detail-label">Total Cost</div>
-                    <div class="booking-detail-value">${booking.totalCost || 'N/A'}</div>
-                </div>
-                <div class="booking-detail">
-                    <div class="booking-detail-label">Booked On</div>
-                    <div class="booking-detail-value">${new Date(booking.createdAt).toLocaleDateString()}</div>
-                </div>
-            </div>
-        </div>
-    `).join('');
-}
+   bookingsList.innerHTML = bookings.map(booking => `
+  <div class="booking-item">
+    <pre class="booking-message">
+Model Booking Request:
+
+👩‍🎤 Model: ${booking.modelName || 'N/A'} (${booking.modelCategory || 'N/A'})
+📅 Date: ${booking.shootDate || 'N/A'}
+⏰ Time: ${booking.shootTime || 'N/A'}
+⌛ Duration: ${booking.duration || 'N/A'}
+🎬 Shoot Type(s): ${Array.isArray(booking.shootTypes) ? booking.shootTypes.join(', ') : booking.shootTypes || 'N/A'}
+📝 Requirements: ${booking.requirements || 'N/A'}${booking.specificRequirements ? '\n' + booking.specificRequirements : ''}
+
+Client: ${booking.clientInstagram || 'N/A'}
+Platform: ${booking.platform || 'N/A'}
+    </pre>
+  </div>
+`).join('');
+   }
 
 // Enhanced Booking Form Handler
 function enhanceBookingForm() {
@@ -1951,23 +2100,23 @@ function enhanceBookingForm() {
     }
 }
 
-// Page Initialization
-document.addEventListener('DOMContentLoaded', function() {
-    const currentPage = window.location.pathname.split('/').pop();
+// // Page Initialization
+// document.addEventListener('DOMContentLoaded', function() {
+//     const currentPage = window.location.pathname.split('/').pop();
     
-    if (currentPage === 'login.html') {
-        const loginForm = document.getElementById('loginForm');
-        if (loginForm) {
-            loginForm.addEventListener('submit', handleLogin);
-        }
-    } else if (currentPage === 'booking-history.html') {
-        initializeBookingHistory();
-    } else if (currentPage.includes('model.html')) {
-        initializeModelGallery();
-    } else if (currentPage === 'bookings.html') {
-        enhanceBookingForm();
-    }
-});
+//     if (currentPage === 'login.html') {
+//         const loginForm = document.getElementById('loginForm');
+//         if (loginForm) {
+//             loginForm.addEventListener('submit', handleLogin);
+//         }
+//     } else if (currentPage === 'booking-history.html') {
+//         initializeBookingHistory();
+//     } else if (currentPage.includes('model.html')) {
+//         initializeModelGallery();
+//     } else if (currentPage === 'bookings.html') {
+//         enhanceBookingForm();
+//     }
+// });
 
 // Close modal when clicking outside
 document.addEventListener('DOMContentLoaded', function() {

@@ -1,6 +1,4 @@
-// -----------------------------
-// AUTH.JS – FINAL NON-FLICKER VERSION (for login copy.html)
-// -----------------------------
+// AUTH.JS - Clean version with NO flickering
 
 const userAuth = {
   getCurrentUser() {
@@ -18,41 +16,41 @@ const userAuth = {
 
   logout() {
     localStorage.removeItem("currentUser");
-    window.location.href = "login copy.html";
+    window.location.href = "signup.html";
   }
 };
 
-// -----------------------------
-// PAGE ACCESS CONTROL (stable, no flicker)
-// -----------------------------
-document.addEventListener("DOMContentLoaded", () => {
-  const page = window.location.pathname.split("/").pop().toLowerCase();
-  const user = userAuth.getCurrentUser();
-
-  // Explicit page names
-  const isLogin  = page === "login copy.html";
-  const isSignup = page === "signup.html";
-
-//   // 1️⃣ Only redirect if we are NOT on login or signup already
-//   if (!user && !isLogin && !isSignup) {
-//     console.log("Not logged in → redirecting to login copy.html");
-//     window.location.replace("login copy.html");
-//     return;
-//   }
-
-  // 2️⃣ Logged-in user trying to see login or signup → send home
-  if (user && (isLogin || isSignup)) {
-    console.log("Already logged in → redirecting to home.html");
-    window.location.replace("home.html");
-    return;
-  }
-});
-
-// -----------------------------
-// SIMPLE PHONE VALIDATION (WhatsApp)
-// -----------------------------
+// PHONE VALIDATION - Must be OUTSIDE the event listener
 function isValidWhatsApp(number) {
   const clean = number.replace(/\D/g, "");
-  // Nigerian number (with or without +234) or international format (10–15 digits)
   return /^(\+?234|0)?[789][01]\d{8}$/.test(clean);
 }
+
+// PAGE PROTECTION - Runs ONCE when page loads
+(function() {
+  // Flag to prevent multiple executions
+  if (window.authCheckComplete) return;
+  window.authCheckComplete = true;
+
+  // Wait for DOM to be ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', performAuthCheck);
+  } else {
+    performAuthCheck();
+  }
+
+  function performAuthCheck() {
+    const currentPage = window.location.pathname.split("/").pop().toLowerCase() || "index.html";
+    const loggedInUser = localStorage.getItem("currentUser");
+    const publicPages = ["login copy.html", "signup.html"];
+    const isPublicPage = publicPages.includes(currentPage);
+
+    if (!loggedInUser && !isPublicPage) {
+      // Not logged in, need login
+      window.location.replace("signup.html");
+    } else if (loggedInUser && isPublicPage) {
+      // Already logged in, go to home
+      window.location.replace("index.html");
+    }
+  }
+})();

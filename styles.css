@@ -1384,6 +1384,31 @@ body {
 
 /* ===== END OF SIGNUP/LOGIN FORM STYLES ===== */
 
+@media (max-width: 768px) {
+  .model-image,
+  .circle-1,
+  .circle-2,
+  .circle-3 {
+    width: 80%;
+    height: auto;
+  }
+
+  .model-left,
+  .model-right {
+    display: none;
+  }
+
+  .fashion-text h1 {
+    font-size: 2rem;
+  }
+
+  .homepage-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
 @media (max-width: 1024px) {
     .enhanced-modal-content {
         grid-template-columns: 1fr;
@@ -1393,9 +1418,27 @@ body {
     
     .datetime-section {
         grid-template-columns: 1fr;
-    }
+    }@media (max-width: 768px) {
+  * {
+    font-size: 90%;
+  }
+  body {
+    zoom: 0.9;
+  }
+}
     
     .booking-buttons {
         grid-template-columns: 1fr;
     }
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Make the whole page scale properly */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
 }

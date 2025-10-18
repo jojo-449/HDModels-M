@@ -15,6 +15,15 @@
     "body-parser": "^2.2.0",
     "dotenv": "^17.0.0",
     "express": "^5.1.0",
+    "express-session": "^1.18.2",
     "nodemailer": "^7.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jojo-449/HDModels-M.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jojo-449/HDModels-M/issues"
+  },
+  "homepage": "https://github.com/jojo-449/HDModels-M#readme"
 }

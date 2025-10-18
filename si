@@ -1,0 +1,153 @@
+// // // function bookViaWhatsApp(modelId, category) {
+// //   const model = window.currentModelForBooking;
+
+// //   // ✅ Get selected shoot types
+// //   const selectedShootTypes = Array.from(document.querySelectorAll('input[name="shootType"]:checked')).map(cb => cb.value);
+
+// //   // ✅ Get booking inputs
+// //   const date = document.getElementById('bookingDate')?.value || 'N/A';
+// //   const time = document.getElementById('bookingTime')?.value || 'N/A';
+// //   const requirements = document.getElementById('modelRequirements')?.value.trim() || 'None specified';
+
+// //   // ✅ Duration fix (handles dropdown or radio)
+// //   let duration = 'N/A';
+// //   const selectEl = document.querySelector('select[id$="-duration-select"]');
+// //   const radioEl = document.querySelector('input[type="radio"][name$="-duration"]:checked');
+
+// //   if (selectEl && selectEl.value) {
+// //     duration = selectEl.value === 'fullday' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
+// //   } else if (radioEl && radioEl.value) {
+// //     duration = radioEl.value === 'full-day' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
+// //   }
+
+// //   // ✅ Specific requirements per shoot type
+// //   let specificRequirements = '';
+// //   selectedShootTypes.forEach(type => {
+// //     const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
+// //     if (reqBox && reqBox.style.display === 'block') {
+// //       const reqText = reqBox.querySelector('textarea').value;
+// //       if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+// //     }
+// //   });
+
+// //   // ✅ Client info
+// //   // ✅ Get client IG handle safely
+// // let clientHandle = 'Client';
+// // const savedUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+// // if (savedUser.username) clientHandle = savedUser.username;
+// // else if (savedUser.instagram) clientHandle = savedUser.instagram;
+// // else if (savedUser.name) clientHandle = savedUser.name;
+
+// //   // ✅ WhatsApp message
+// //   const bookingMessage = `Hi! I'd like to book ${model.name} (${category} model).
+
+// // 📅 Date: ${date}
+// // ⏰ Time: ${time}
+// // ⌛ Duration: ${duration}
+// // 🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
+// // 📝 Requirements: ${requirements}
+// // ${specificRequirements}
+// // Client: @${clientHandle}`;
+
+// //   // ✅ Open WhatsApp with your custom link
+// //   const whatsappUrl = `https://wa.me/2348146518310?text=${encodeURIComponent(bookingMessage)}`;
+// //   window.open(whatsappUrl, '_blank');
+
+// //   // ✅ Save booking to history
+// //   bookingManager.addBooking({
+// //     clientInstagram: '@' + clientHandle,
+// //     modelName: model.name,
+// //     modelCategory: category,
+// //     shootTypes: selectedShootTypes,
+// //     shootDate: date,
+// //     shootTime: time,
+// //     duration: duration,
+// //     requirements: requirements,
+// //     specificRequirements: specificRequirements,
+// //     platform: 'WhatsApp'
+// //   });
+
+// //   closeEnhancedModal();
+// // }
+
+
+
+
+
+  
+// function bookViaInstagram(modelId, category) {
+//   const model = window.currentModelForBooking;
+
+//   // ✅ Get selected shoot types
+//   const selectedShootTypes = Array.from(document.querySelectorAll('input[name="shootType"]:checked')).map(cb => cb.value);
+
+//   // ✅ Get booking inputs
+//   const date = document.getElementById('bookingDate')?.value || 'N/A';
+//   const time = document.getElementById('bookingTime')?.value || 'N/A';
+//   const requirements = document.getElementById('modelRequirements')?.value.trim() || 'None specified';
+
+//   // ✅ Duration fix
+//   let duration = 'N/A';
+//   const selectEl = document.querySelector('select[id$="-duration-select"]');
+//   const radioEl = document.querySelector('input[type="radio"][name$="-duration"]:checked');
+
+//   if (selectEl && selectEl.value) {
+//     duration = selectEl.value === 'fullday' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
+//   } else if (radioEl && radioEl.value) {
+//     duration = radioEl.value === 'full-day' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
+//   }
+
+//   // ✅ Specific requirements
+//   let specificRequirements = '';
+//   selectedShootTypes.forEach(type => {
+//     const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
+//     if (reqBox && reqBox.style.display === 'block') {
+//       const reqText = reqBox.querySelector('textarea').value;
+//       if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+//     }
+//   });
+
+//   // ✅ Client info
+//   // ✅ Get client IG handle safely
+// let clientHandle = 'Client';
+// const savedUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+// if (savedUser.username) clientHandle = savedUser.username;
+// else if (savedUser.instagram) clientHandle = savedUser.instagram;
+// else if (savedUser.name) clientHandle = savedUser.name;
+//   // ✅ Instagram message
+//   const bookingDetails = `Model Booking Request:
+
+// 👩‍🎤 Model: ${model.name} (${category})
+// 📅 Date: ${date}
+// ⏰ Time: ${time}
+// ⌛ Duration: ${duration}
+// 🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
+// 📝 Requirements: ${requirements}
+// ${specificRequirements}
+// Client: @${clientHandle}`;
+
+//   // ✅ Copy message & open Instagram
+//   navigator.clipboard.writeText(bookingDetails).then(() => {
+//     alert('Booking details copied! Redirecting to Instagram...');
+//     window.open("https://www.instagram.com/hdmodels.co/", "_blank");
+//   }).catch(() => {
+//     alert('Please copy and send via Instagram DM:\n\n' + bookingDetails);
+//     window.open("https://www.instagram.com/hdmodels.co/", "_blank");
+//   });
+
+//   // ✅ Save booking
+//   bookingManager.addBooking({
+//     clientInstagram: '@' + clientHandle,
+//     modelName: model.name,
+//     modelCategory: category,
+//     shootTypes: selectedShootTypes,
+//     shootDate: date,
+//     shootTime: time,
+//     duration: duration,
+//     requirements: requirements,
+//     specificRequirements: specificRequirements,
+//     platform: 'Instagram'
+//   });
+
+//   closeEnhancedModal();
+// }

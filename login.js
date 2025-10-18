@@ -1,4 +1,4 @@
-// LOGIN.JS – HDMODELS
+// LOGIN.JS - Handles login form
 
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
@@ -13,10 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const identifierError = document.getElementById("identifierError");
         const passwordError = document.getElementById("loginPasswordError");
 
+        // Hide old errors
         identifierError.style.display = "none";
         passwordError.style.display = "none";
 
-        // Basic validation
+        // Check if fields are empty
         if (identifier === "") {
             identifierError.textContent = "Please enter your Instagram handle or WhatsApp number.";
             identifierError.style.display = "block";
@@ -29,26 +30,27 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Get stored user
+        // Get stored user from browser
         const storedUser = JSON.parse(localStorage.getItem("currentUser"));
 
+        // Check if user exists
         if (!storedUser) {
-            alert("No account found. Please sign up first.");
+            alert("No account found. Redirecting to signup page...");
             window.location.href = "signup.html";
             return;
         }
 
-        // Match user
+        // Check if login details match
         if (
-            (storedUser.instagram === identifier ||
-                storedUser.whatsapp === identifier) &&
+            (storedUser.instagram === identifier || storedUser.whatsapp === identifier) &&
             storedUser.password === password
         ) {
             alert("Login successful!");
-            userAuth.login(storedUser); // store session
-            window.location.href = "home.html";
+            userAuth.login(storedUser);
+            window.location.href = "index.html";
         } else {
-            alert("Invalid login credentials. Please check your details.");
+            passwordError.textContent = "Invalid login credentials. Please check your details.";
+            passwordError.style.display = "block";
         }
     });
 });
