@@ -1,5 +1,34 @@
 // HDMODELS Website JavaScript
 
+
+
+// Ensure userAuth is defined, especially if auth.js might not always load or is conditional.
+// This simplified version will allow booking history to check for a user.
+if (typeof userAuth === 'undefined') {
+    window.userAuth = {
+        getCurrentUser: function() {
+            // Retrieve current user from localStorage.
+            // Adjust the key 'currentUser' if your actual auth.js uses a different one.
+            const userString = localStorage.getItem('currentUser') || localStorage.getItem('currentUser ');
+            try {
+                return userString ? JSON.parse(userString) : null;
+            } catch (e) {
+                console.error("Error parsing user from localStorage:", e);
+                return null;
+            }
+        },
+        // You can add other placeholder methods if needed elsewhere, e.g.,
+        // login: function() { console.warn("Login function not available without full auth.js"); },
+        // logout: function() { console.warn("Logout function not available without full auth.js"); }
+    };
+}
+
+
+
+
+
+
+
 // WhatsApp Integration
 function generateWhatsAppURL(phoneNumber, message) {
     const cleaned = String(phoneNumber).replace(/[^0-9]/g, '');
@@ -131,7 +160,7 @@ function handleBookingSubmit(e) {
 🎬 Shoot Type: ${formData.shootType}
 📍 Location: ${formData.location}
 💰 Estimated Price: ₦${estimatedPrice.toLocaleString()}
-${modelRequirements}${formData.requirements ? `*ADDITIONAL REQUIREMENTS:*\n${formData.requirements}\n\n` : ''}*Please confirm availability and exact pricing.*
+${modelRequirements}${formData.requirements ? `*ADDITIONAL REQUIREMENTS:*\n${formData.requirements}\n\n` : ''}
 
 Thank you!`;
     
@@ -183,7 +212,7 @@ function handleModelApplicationSubmit(e) {
         portfolioLink: document.getElementById('portfolioLink').value || 'Not provided',
         previousWork: document.getElementById('previousWork').value || 'None provided',
         motivation: document.getElementById('motivation').value || 'Not provided',
-        availability: document.getElementById('availability').value
+        // availability: document.getElementById('availability').value
     };
     
     // Get selected shoot types
@@ -197,8 +226,7 @@ function handleModelApplicationSubmit(e) {
     if (!formData.fullName || !formData.email || !formData.whatsappNumber || 
         !formData.dateOfBirth || !formData.location || !formData.height || 
         !formData.dressSize || !formData.bust || !formData.waist || 
-        !formData.hips || !formData.shoeSize || !formData.hairColor || 
-        !formData.availability || shootTypes.length === 0) {
+        !formData.hips || !formData.shoeSize || !formData.hairColor       ) {
         alert('Please fill in all required fields and select at least one shoot type.');
         return;
     }
@@ -271,7 +299,7 @@ Looking forward to hearing from you!`;
         experience: formData.experience,
         portfolio: formData.portfolioLink,
         previousWork: formData.previousWork,
-        availability: formData.availability,
+        // availability: formData.availability,
         motivation: formData.motivation
     });
     
@@ -510,7 +538,7 @@ class BookingManager {
         const booking = {
             id: this.generateBookingId(),
             ...bookingData,
-            status: 'pending',
+            
             createdAt: new Date().toISOString(),
             userId: userAuth.getCurrentUser()?.id
         };
@@ -521,7 +549,8 @@ class BookingManager {
     }
 
     getUserBookings(userId) {
-        return this.bookings.filter(booking => booking.userId === userId);
+        return this.bookings.filter(booking => booking.userId === userId)
+        .reverse();
     }
 
     updateBookingStatus(bookingId, status) {
@@ -555,30 +584,30 @@ document.addEventListener('DOMContentLoaded', initializeModelGallery);
 // MANUAL MODEL DATA - INPUT YOUR MODELS HERE
 const modelGalleryData = {
     basic: [
-        // ADD YOUR BASIC MODELS HERE - EXAMPLE:
-        {
-            id: 'basic_1',
-            name: 'Sophia Grace',
-            image: 'path/to/sophia-main.jpg', // Replace with your model's main image
-            additionalImages: [
-                'path/to/sophia-2.jpg', // Replace with additional images/videos
-                'path/to/sophia-3.jpg',
-                'path/to/sophia-4.jpg',
-                'path/to/sophia-video.mp4'
-            ],
-            height: '165cm',
-            size: 'S',
-            bust: '32"',
-            waist: '24"',
-            hips: '34"',
-            shoeSize: '7',
-            hairColor: 'Brown',
-            eyeColor: 'Hazel',
-            about: 'Professional model with 2 years experience in fashion and beauty shoots.',
-            shootTypes: ['Fashion', 'Beauty', 'Skincare'],
+        // // ADD YOUR BASIC MODELS HERE - EXAMPLE:
+        // {
+        //     // id: 'basic_1',
+        //     // name: 'Sophia Grace',
+        //     // image: 'path/to/sophia-main.jpg', // Replace with your model's main image
+        //     // additionalImages: [
+        //     //     'path/to/sophia-2.jpg', // Replace with additional images/videos
+        //     //     'path/to/sophia-3.jpg',
+        //     //     'path/to/sophia-4.jpg',
+        //     //     'path/to/sophia-video.mp4'
+        //     // ],
+        //     // height: '165cm',
+        //     // size: 'S',
+        //     // bust: '32"',
+        //     // waist: '24"',
+        //     // hips: '34"',
+        //     // shoeSize: '7',
+        //     // hairColor: 'Brown',
+        //     // eyeColor: 'Hazel',
+        //     // about: 'Professional model with 2 years experience in fashion and beauty shoots.',
+        //     // shootTypes: ['Fashion', 'Beauty', 'Skincare'],
             
             
-        }
+        // }
         // ADD MORE MODELS BY COPYING THE STRUCTURE ABOVE
     ],
     top: [
@@ -634,21 +663,21 @@ const modelGalleryData = {
  {
             id: 'top_3',
             name: 'Princess',
-            image: 'top models/WhatsApp Image 2025-06-13 at 22.22.05_ba2961e7.jpg',
+            image: 'top models/_OLA3402.JPG',
             additionalImages: [
                 'path/to/isabella-2.jpg',
                 'path/to/isabella-3.jpg',
                 'path/to/isabella-4.jpg',
                 'path/to/isabella-video.mp4'
             ],
-            height: '...',
-            size: '.',
+            height: '5*6',
+            size: '6/8',
             bust: '..."',
             waist: '..."',
             hips: '..."',
-            shoeSize: '.',
-            hairColor: '...',
-            eyeColor: '...',
+            shoeSize: '37/38',
+            hairColor: 'Black(Natural)',
+            eyeColor: 'Brown',
             about: 'Top-tier model with extensive experience in high-fashion campaigns.',
             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
            
@@ -802,15 +831,15 @@ const modelGalleryData = {
                 'path/to/isabella-4.jpg',
                 'path/to/isabella-video.mp4'
             ],
-            height: '168cm',
-            size: '..',
-            bust: '."',
-            waist: '.."',
-            hips: '.."',
-            shoeSize: '..',
-            hairColor: '..',
-            eyeColor: '..',
-            about: 'Top-tier model with extensive experience in high-fashion campaigns.',
+            height: '5*6',
+            size: '12',
+            bust: '40',
+            waist: '33"',
+            hips: '42"',
+            shoeSize: '39',
+            hairColor: 'Black(relaxed)',
+            eyeColor: 'chestnut brown',
+            about: 'My name is Goodness but most people call me Rolex I’m a student and an entrepreneur started out as a freelance model for 2 years and joined an agency in my third year and this is my fourth year as a face model ,I love transitions,I love the camera,I love posing I want to be one of the best face models in Nigeria 🇳🇬',
             shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Video Vixen', 'Brand'],
             
         },
@@ -1304,29 +1333,29 @@ const modelGalleryData = {
     ],
     elite: [
         // ADD YOUR ELITE MODELS HERE - EXAMPLE:
-        {
-            id: 'elite_1',
-            name: 'Anastasia Divine',
-            image: 'path/to/anastasia-main.jpg',
-            additionalImages: [
-                'path/to/anastasia-2.jpg',
-                'path/to/anastasia-3.jpg',
-                'path/to/anastasia-4.jpg',
-                'path/to/anastasia-video.mp4'
-            ],
-            height: '175cm',
-            size: 'XS',
-            bust: '34"',
-            waist: '23"',
-            hips: '34"',
-            shoeSize: '8',
-            hairColor: 'Auburn',
-            eyeColor: 'Green',
-            about: 'Elite supermodel with international campaign experience and runway expertise.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+        // {
+        //     // id: 'elite_1',
+        //     // name: 'Anastasia Divine',
+        //     // image: 'path/to/anastasia-main.jpg',
+        //     // additionalImages: [
+        //     //     'path/to/anastasia-2.jpg',
+        //     //     'path/to/anastasia-3.jpg',
+        //     //     'path/to/anastasia-4.jpg',
+        //     //     'path/to/anastasia-video.mp4'
+        //     // ],
+        //     // height: '175cm',
+        //     // size: 'XS',
+        //     // bust: '34"',
+        //     // waist: '23"',
+        //     // hips: '34"',
+        //     // shoeSize: '8',
+        //     // hairColor: 'Auburn',
+        //     // eyeColor: 'Green',
+        //     // about: 'Elite supermodel with international campaign experience and runway expertise.',
+        //     // shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
             
            
-        },
+        // },
         // ADD MORE MODELS HERE
          {
             id: 'elite_2',
@@ -1378,29 +1407,29 @@ const modelGalleryData = {
 
     premium: [
         // ADD YOUR ELITE MODELS HERE - EXAMPLE:4
-         {
-            id: 'elite_1',
-            name: 'Anastasia Divine',
-            image: 'path/to/anastasia-main.jpg',
-            additionalImages: [
-                'path/to/anastasia-2.jpg',
-                'path/to/anastasia-3.jpg',
-                'path/to/anastasia-4.jpg',
-                'path/to/anastasia-video.mp4'
-            ],
-            height: '175cm',
-            size: 'XS',
-            bust: '34"',
-            waist: '23"',
-            hips: '34"',
-            shoeSize: '8',
-            hairColor: 'Auburn',
-            eyeColor: 'Green',
-            about: 'Elite supermodel with international campaign experience and runway expertise.',
-            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
-            // price: '₦500,000 - ₦1,000,000',
-            // availability: 'By Appointment: 12PM - 10PM'
-        },
+        //  {
+        //     // id: 'elite_1',
+        //     // name: 'Anastasia Divine',
+        //     // image: 'path/to/anastasia-main.jpg',
+        //     // additionalImages: [
+        //     //     'path/to/anastasia-2.jpg',
+        //     //     'path/to/anastasia-3.jpg',
+        //     //     'path/to/anastasia-4.jpg',
+        //     //     'path/to/anastasia-video.mp4'
+        //     // ],
+        //     // height: '175cm',
+        //     // size: 'XS',
+        //     // bust: '34"',
+        //     // waist: '23"',
+        //     // hips: '34"',
+        //     // shoeSize: '8',
+        //     // hairColor: 'Auburn',
+        //     // eyeColor: 'Green',
+        //     // about: 'Elite supermodel with international campaign experience and runway expertise.',
+        //     // shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand', 'Video Vixen'],
+        //     // // price: '₦500,000 - ₦1,000,000',
+        //     // // availability: 'By Appointment: 12PM - 10PM'
+        // },
        
         // ADD MORE MODELS HERE
          {
@@ -1525,7 +1554,7 @@ const modelGalleryData = {
         {
            id: 'premium_6',
             name: 'Feyi',
-            image: 'premium models/WhatsApp Image 2025-09-15 at 22.23.03_f3ad781e.jpg',
+            image: 'premium models/Feyi[1].png',
             additionalImages: [
                 '',
                 '',
@@ -1547,6 +1576,32 @@ const modelGalleryData = {
             
            
         },
+
+         {
+           id: 'premium_7',
+            name: 'Jummy',
+            image: 'premium models/jummy.jpg',
+            additionalImages: [
+                '',
+                '',
+                '',
+                ''
+            ],
+             height:'5*5"',
+             size: 'uk-10/12"',
+           bust:'42/under-bust-33"',
+           waist:'35"',
+           hips:'43"',
+           shoeSize:'40"',
+          hairColor: 'Black(relaxed)',
+           eyecolor: 'Brown', 
+           about: '',
+            shootTypes: ['Fashion', 'Beauty', 'Bridal', 'Brand',
+               'Video Vixen'],
+           
+            
+           
+        }
     ]
 };
 
@@ -1640,10 +1695,7 @@ function openModelModal(modelId, category) {
                         <p>${model.about}</p>
                     </div>
                     
-                    <div class="model-availability">
-                        <h4>Availability</h4>
-                        <p>${model.availability}</p>
-                    </div>
+                   
                     
                 
                 </div>
@@ -1656,36 +1708,41 @@ function openModelModal(modelId, category) {
                     <div class="shoot-types-selection">
                         <h4>Select Shoot Type(s)</h4>
                         ${model.shootTypes.map(type => `
-  <div class="shoot-type-item">
-    <label>
-      <input type="checkbox" name="shootType" value="${type}"> ${type}
-    </label>
+  
+  
+                            <div class="shoot-type-item">
+  <label>
+    <input type="checkbox" name="shootType" value="${type}"> ${type}
+  </label>
 
-    <button style="color:black" type="button" class="expand-requirements" onclick="toggleRequirements('${type.toLowerCase()}')">
-      + Add Specific Requirements
-    </button>
+  <button style="color:black" type="button" class="expand-requirements" onclick="toggleRequirements('${type.toLowerCase()}')">
+    + Add Specific Requirements
+  </button>
 
-    <div id="${type.toLowerCase()}-requirements" class="requirements-box" style="display:none;">
-      <textarea placeholder="Add specific requirements for ${type} shoot..."></textarea>
+  <div id="${type.toLowerCase()}-requirements" class="requirements-box" style="display:none;">
+    <textarea placeholder="Add specific requirements for ${type} shoot..."></textarea>
 
-      ${['Fashion', 'Brand'].includes(type)
-        ? `
-          <div class="duration-section" style="margin-top:10px;">
-            <h5 style="color:black;">Select Duration</h5>
-            <label style="display:block; margin-bottom:5px;">
-              <input type="radio" name="${type.toLowerCase()}-duration" value="full-day">
-              Full Day (9 AM – 5 PM)
-            </label>
-            <label style="display:block;">
-              <input type="radio" name="${type.toLowerCase()}-duration" value="5-hours">
-              5 Hours
-            </label>
-          </div>
-        `
-        : ''
-      }
-    </div>
+    <!-- Only Fashion and Brand have duration/time -->
+    ${['Fashion', 'Brand'].includes(type)
+      ? `
+        <div class="duration-section" style="margin-top:10px;">
+          <h5 style="color:black;">Duration</h5>
+          <label style="display:block; margin-bottom:5px;">
+            <input type="radio" name="${type.toLowerCase()}-duration" value="5-hours">
+            5 Hours
+          </label>
+          <label style="display:block;">
+            <input type="radio" name="${type.toLowerCase()}-duration" value="full-day">
+            Full Day (9 AM – 5 PM)
+          </label>
+
+          
+        </div>
+      `
+      : ''
+    }
   </div>
+</div>
 `).join('')}
                     </div>
                     
@@ -1827,38 +1884,52 @@ function toggleRequirements(shootType) {
 //   closeEnhancedModal();
 // }
 
+
+
+// Function to handle booking via WhatsApp
 function bookViaWhatsApp(modelId, category) {
   const model = window.currentModelForBooking;
   const selectedShootTypes = Array.from(
     document.querySelectorAll('input[name="shootType"]:checked')
   ).map(cb => cb.value);
 
-  // ✅ Collect form inputs safely
   const date = document.getElementById('bookingDate')?.value || 'N/A';
   const time = document.getElementById('bookingTime')?.value || 'N/A';
   const requirements = document.getElementById('modelRequirements')?.value.trim() || 'None specified';
 
-  // ✅ Duration (works for dropdown or radio)
-  let duration = 'N/A';
-  const selectEl = document.querySelector('select[id$="-duration-select"]');
-  const radioEl = document.querySelector('input[type="radio"][name$="-duration"]:checked');
-  if (selectEl && selectEl.value) {
-    duration = selectEl.value === 'fullday' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
-  } else if (radioEl && radioEl.value) {
-    duration = radioEl.value === 'full-day' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
-  }
-
-  // ✅ Specific requirements
-  let specificRequirements = '';
+  // Build detailed section per shoot type
+  let shootDetails = "";
   selectedShootTypes.forEach(type => {
-    const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
-    if (reqBox && reqBox.style.display === 'block') {
-      const reqText = reqBox.querySelector('textarea').value;
-      if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+    const lower = type.toLowerCase();
+
+    // Check if requirement box is shown and get requirements text
+    const reqBox = document.getElementById(`${lower}-requirements`);
+    let reqText = "";
+    if (reqBox && reqBox.style.display === "block") {
+      const textarea = reqBox.querySelector("textarea");
+      reqText = textarea ? textarea.value.trim() : "";
     }
+
+    // Check for duration only for Fashion & Brand
+    let durationText = "";
+    if (["fashion", "brand"].includes(lower)) {
+      const durationInput = document.querySelector(`input[name="${lower}-duration"]:checked`);
+      if (durationInput) {
+        durationText =
+          durationInput.value === "full-day"
+            ? "Full Day (9 AM - 5 PM)"
+            : "5 Hours";
+      }
+    }
+
+    // Append everything neatly for WhatsApp message
+    shootDetails += `\n🎬 ${type} Shoot:`;
+    if (durationText) shootDetails += `\n⌛ Duration: ${durationText}`;
+    if (reqText) shootDetails += `\n📝 Requirements: ${reqText}`;
+    shootDetails += "\n";
   });
 
-  // ✅ Client IG handle (works even if key has space)
+  // Client IG handle
   let clientHandle = 'Client';
   const savedUser = JSON.parse(
     localStorage.getItem('currentUser') || localStorage.getItem('currentUser ') || '{}'
@@ -1867,22 +1938,23 @@ function bookViaWhatsApp(modelId, category) {
   else if (savedUser.instagram) clientHandle = savedUser.instagram;
   else if (savedUser.name) clientHandle = savedUser.name;
 
-  // ✅ WhatsApp message
+  // WhatsApp message
   const bookingMessage = `Hi! I'd like to book ${model.name} (${category} model).
 
 📅 Date: ${date}
 ⏰ Time: ${time}
-⌛ Duration: ${duration}
-🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
-📝 Requirements: ${requirements}
-${specificRequirements}
+${shootDetails}
+📝 General Notes: ${requirements}
 Client: @${clientHandle}`;
 
-  // ✅ Open WhatsApp
-  const whatsappUrl = `https://wa.me/2348146518310?text=${encodeURIComponent(bookingMessage)}`;
+  // Open WhatsApp
+  const whatsappUrl = `https://wa.me/2349018912194?text=${encodeURIComponent(bookingMessage)}`;
   window.open(whatsappUrl, '_blank');
 
-  // ✅ Save booking
+  const currentUser = userAuth.getCurrentUser();
+  const currentUserId = currentUser ? currentUser.id : null;
+  
+  // Save booking
   bookingManager.addBooking({
     clientInstagram: '@' + clientHandle,
     modelName: model.name,
@@ -1890,81 +1962,17 @@ Client: @${clientHandle}`;
     shootTypes: selectedShootTypes,
     shootDate: date,
     shootTime: time,
-    duration: duration,
+    duration: shootDetails.replace(/\n/g, '; ').trim(), // Summarize durations for history if needed
     requirements: requirements,
-    specificRequirements: specificRequirements,
-    platform: 'WhatsApp'
+    specificRequirements: shootDetails.replace(/\n/g, '; ').trim(), // Use shootDetails here too for detail
+    platform: 'WhatsApp',
+    userId: currentUserId
   });
 
   closeEnhancedModal();
 }
 
-// function bookViaInstagram(modelId, category) {
-//   const model = window.currentModelForBooking;
-//   const selectedShootTypes = Array.from(document.querySelectorAll('input[name="shootType"]:checked')).map(cb => cb.value);
-//   const date = document.getElementById('bookingDate').value || 'N/A';
-//   const time = document.getElementById('bookingTime').value || 'N/A';
-//   const durationInput = document.getElementById('bookingDuration');
-//   const duration = durationInput ? durationInput.value : 'N/A';
-//   const requirements = document.getElementById('modelRequirements').value || 'N/A';
-//   const savedUser = JSON.parse(localStorage.getItem('newUser')) || {};
-// const clientHandle =
-//   savedUser.username ||
-//   savedUser.name ||
-//   savedUser.instagram ||
-//   savedUser.handle ||
-//   'Unknown';
-
-//   // ✅ Collect specific requirements
-//   let specificRequirements = '';
-//   selectedShootTypes.forEach(type => {
-//     const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
-//     if (reqBox && reqBox.style.display === 'block') {
-//       const reqText = reqBox.querySelector('textarea').value;
-//       if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
-//     }
-//   });
-
-//   // ✅ Message to send
-//   const bookingDetails = `Model Booking Request:
-
-// 👩‍🎤 Model: ${model.name} (${category})
-// 📅 Date: ${date}
-// ⏰ Time: ${time}
-// ⌛ Duration: ${duration} hours
-// 🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
-// 📝 Requirements: ${requirements}
-// ${specificRequirements}
-
-// Client: @${clientHandle}`;
-
-//   // ✅ Copy to clipboard, then open Instagram
-//   navigator.clipboard.writeText(bookingDetails).then(() => {
-//     alert('Booking details copied! Redirecting to Instagram...');
-//     window.open("https://www.instagram.com/hdmodels.co/", "_blank"); // ← Your real agency IG link
-//   }).catch(() => {
-//     alert('Please copy this booking information and send it via Instagram DM:\n\n' + bookingDetails);
-//     window.open("https://www.instagram.com/hdmodels.co/", "_blank"); // same link for fallback
-//   });
-
-//   // ✅ Save to booking history
-//   bookingManager.addBooking({
-//     clientInstagram: '@' + clientHandle,
-//     modelName: model.name,
-//     modelCategory: category,
-//     shootTypes: selectedShootTypes,
-//     shootDate: date,
-//     shootTime: time,
-//     duration: duration + ' hours',
-//     requirements: requirements,
-//     specificRequirements: specificRequirements,
-//     platform: 'Instagram'
-//   });
-
-//   closeEnhancedModal();
-// }
-
-
+// Function to handle booking via Instagram
 function bookViaInstagram(modelId, category) {
   const model = window.currentModelForBooking;
   const selectedShootTypes = Array.from(
@@ -1975,22 +1983,36 @@ function bookViaInstagram(modelId, category) {
   const time = document.getElementById('bookingTime')?.value || 'N/A';
   const requirements = document.getElementById('modelRequirements')?.value.trim() || 'None specified';
 
-  let duration = 'N/A';
-  const selectEl = document.querySelector('select[id$="-duration-select"]');
-  const radioEl = document.querySelector('input[type="radio"][name$="-duration"]:checked');
-  if (selectEl && selectEl.value) {
-    duration = selectEl.value === 'fullday' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
-  } else if (radioEl && radioEl.value) {
-    duration = radioEl.value === 'full-day' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
-  }
-
-  let specificRequirements = '';
+  // Build detailed section per shoot type
+  let shootDetails = "";
   selectedShootTypes.forEach(type => {
-    const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
-    if (reqBox && reqBox.style.display === 'block') {
-      const reqText = reqBox.querySelector('textarea').value;
-      if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+    const lower = type.toLowerCase();
+
+    // Check if requirement box is shown and get requirements text
+    const reqBox = document.getElementById(`${lower}-requirements`);
+    let reqText = "";
+    if (reqBox && reqBox.style.display === "block") {
+      const textarea = reqBox.querySelector("textarea");
+      reqText = textarea ? textarea.value.trim() : "";
     }
+
+    // Check for duration only for Fashion & Brand
+    let durationText = "";
+    if (["fashion", "brand"].includes(lower)) {
+      const durationInput = document.querySelector(`input[name="${lower}-duration"]:checked`);
+      if (durationInput) {
+        durationText =
+          durationInput.value === "full-day"
+            ? "Full Day (9 AM - 5 PM)"
+            : "5 Hours";
+      }
+    }
+
+    // Append everything neatly for Instagram message
+    shootDetails += `\n🎬 ${type} Shoot:`;
+    if (durationText) shootDetails += `\n⌛ Duration: ${durationText}`;
+    if (reqText) shootDetails += `\n📝 Requirements: ${reqText}`;
+    shootDetails += "\n";
   });
 
   let clientHandle = 'Client';
@@ -2006,10 +2028,8 @@ function bookViaInstagram(modelId, category) {
 👩‍🎤 Model: ${model.name} (${category})
 📅 Date: ${date}
 ⏰ Time: ${time}
-⌛ Duration: ${duration}
-🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
-📝 Requirements: ${requirements}
-${specificRequirements}
+${shootDetails}
+📝 General Notes: ${requirements}
 Client: @${clientHandle}`;
 
   navigator.clipboard.writeText(bookingDetails).then(() => {
@@ -2020,6 +2040,9 @@ Client: @${clientHandle}`;
     window.open("https://www.instagram.com/hdmodels.co/", "_blank");
   });
 
+  const currentUser = userAuth.getCurrentUser();
+  const currentUserId = currentUser ? currentUser.id : null;
+
   bookingManager.addBooking({
     clientInstagram: '@' + clientHandle,
     modelName: model.name,
@@ -2027,14 +2050,285 @@ Client: @${clientHandle}`;
     shootTypes: selectedShootTypes,
     shootDate: date,
     shootTime: time,
-    duration: duration,
+    duration: shootDetails.replace(/\n/g, '; ').trim(), // Summarize durations for history
     requirements: requirements,
-    specificRequirements: specificRequirements,
-    platform: 'Instagram'
+    specificRequirements: shootDetails.replace(/\n/g, '; ').trim(), // Use shootDetails here too for detail
+    platform: 'Instagram',
+    userId: currentUserId
   });
 
   closeEnhancedModal();
 }
+
+
+
+
+
+// function bookViaWhatsApp(modelId, category) {
+//   const model = window.currentModelForBooking;
+//   const selectedShootTypes = Array.from(
+//     document.querySelectorAll('input[name="shootType"]:checked')
+//   ).map(cb => cb.value);
+
+//   // ✅ Collect form inputs safely
+//   const date = document.getElementById('bookingDate')?.value || 'N/A';
+//   const time = document.getElementById('bookingTime')?.value || 'N/A';
+//   const requirements = document.getElementById('modelRequirements')?.value.trim() || 'None specified';
+
+//   // ✅ Duration (works for dropdown or radio)
+//   let duration = 'N/A';
+//   const selectEl = document.querySelector('select[id$="-duration-select"]');
+//   const radioEl = document.querySelector('input[type="radio"][name$="-duration"]:checked');
+//   if (selectEl && selectEl.value) {
+//     duration = selectEl.value === 'fullday' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
+//   } else if (radioEl && radioEl.value) {
+//     duration = radioEl.value === 'full-day' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
+//   }
+
+//   // ✅ Specific requirements
+//   let specificRequirements = '';
+//   selectedShootTypes.forEach(type => {
+//     const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
+//     if (reqBox && reqBox.style.display === 'block') {
+//       const reqText = reqBox.querySelector('textarea').value;
+//       if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+//     }
+//   });
+
+//   // ✅ Client IG handle (works even if key has space)
+//   let clientHandle = 'Client';
+//   const savedUser = JSON.parse(
+//     localStorage.getItem('currentUser') || localStorage.getItem('currentUser ') || '{}'
+//   );
+//   if (savedUser.username) clientHandle = savedUser.username;
+//   else if (savedUser.instagram) clientHandle = savedUser.instagram;
+//   else if (savedUser.name) clientHandle = savedUser.name;
+
+//   // ✅ WhatsApp message
+//   const bookingMessage = `Hi! I'd like to book ${model.name} (${category} model).
+
+// 📅 Date: ${date}
+// ⏰ Time: ${time}
+// ⌛ Duration: ${duration}
+// 🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
+// 📝 Requirements: ${requirements}
+// ${specificRequirements}
+// Client: @${clientHandle}`;
+
+//   // ✅ Open WhatsApp
+//   const whatsappUrl = `https://wa.me/2349018912194?text=${encodeURIComponent(bookingMessage)}`;
+//   window.open(whatsappUrl, '_blank');
+
+
+//   const currentUser = userAuth.getCurrentUser();
+// const currentUserId = currentUser ? currentUser.id : null;
+// console.log("Attempting to add booking for userId:", currentUserId);
+
+// bookingManager.addBooking({
+//   // ... existing booking data ...
+//   userId: currentUserId // Use the logged variable
+// });
+
+//   // ✅ Save booking
+//   bookingManager.addBooking({
+//     clientInstagram: '@' + clientHandle,
+//     modelName: model.name,
+//     modelCategory: category,
+//     shootTypes: selectedShootTypes,
+//     shootDate: date,
+//     shootTime: time,
+//     duration: duration,
+//     requirements: requirements,
+//     specificRequirements: specificRequirements,
+//     platform: 'WhatsApp'
+//   });
+
+//   closeEnhancedModal();
+// }
+
+// // function bookViaInstagram(modelId, category) {
+// //   const model = window.currentModelForBooking;
+// //   const selectedShootTypes = Array.from(document.querySelectorAll('input[name="shootType"]:checked')).map(cb => cb.value);
+// //   const date = document.getElementById('bookingDate').value || 'N/A';
+// //   const time = document.getElementById('bookingTime').value || 'N/A';
+// //   const durationInput = document.getElementById('bookingDuration');
+// //   const duration = durationInput ? durationInput.value : 'N/A';
+// //   const requirements = document.getElementById('modelRequirements').value || 'N/A';
+// //   const savedUser = JSON.parse(localStorage.getItem('newUser')) || {};
+// // const clientHandle =
+// //   savedUser.username ||
+// //   savedUser.name ||
+// //   savedUser.instagram ||
+// //   savedUser.handle ||
+// //   'Unknown';
+
+// //   // ✅ Collect specific requirements
+// //   let specificRequirements = '';
+// //   selectedShootTypes.forEach(type => {
+// //     const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
+// //     if (reqBox && reqBox.style.display === 'block') {
+// //       const reqText = reqBox.querySelector('textarea').value;
+// //       if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+// //     }
+// //   });
+
+// //   // ✅ Message to send
+// //   const bookingDetails = `Model Booking Request:
+
+// // 👩‍🎤 Model: ${model.name} (${category})
+// // 📅 Date: ${date}
+// // ⏰ Time: ${time}
+// // ⌛ Duration: ${duration} hours
+// // 🎬 Shoot Type(s): ${selectedShootTypes.join(', ')}
+// // 📝 Requirements: ${requirements}
+// // ${specificRequirements}
+
+// // Client: @${clientHandle}`;
+
+// //   // ✅ Copy to clipboard, then open Instagram
+// //   navigator.clipboard.writeText(bookingDetails).then(() => {
+// //     alert('Booking details copied! Redirecting to Instagram...');
+// //     window.open("https://www.instagram.com/hdmodels.co/", "_blank"); // ← Your real agency IG link
+// //   }).catch(() => {
+// //     alert('Please copy this booking information and send it via Instagram DM:\n\n' + bookingDetails);
+// //     window.open("https://www.instagram.com/hdmodels.co/", "_blank"); // same link for fallback
+// //   });
+
+// //   // ✅ Save to booking history
+// //   bookingManager.addBooking({
+// //     clientInstagram: '@' + clientHandle,
+// //     modelName: model.name,
+// //     modelCategory: category,
+// //     shootTypes: selectedShootTypes,
+// //     shootDate: date,
+// //     shootTime: time,
+// //     duration: duration + ' hours',
+// //     requirements: requirements,
+// //     specificRequirements: specificRequirements,
+// //     platform: 'Instagram'
+// //   });
+
+// //   closeEnhancedModal();
+// // }
+
+
+// function bookViaInstagram(modelId, category) {
+//   const model = window.currentModelForBooking;
+//   const selectedShootTypes = Array.from(
+//     document.querySelectorAll('input[name="shootType"]:checked')
+//   ).map(cb => cb.value);
+
+//   const date = document.getElementById('bookingDate')?.value || 'N/A';
+//   const time = document.getElementById('bookingTime')?.value || 'N/A';
+//   const requirements = document.getElementById('modelRequirements')?.value.trim() || 'None specified';
+
+// //   let duration = 'N/A';
+// //   const selectEl = document.querySelector('select[id$="-duration-select"]');
+// //   const radioEl = document.querySelector('input[type="radio"][name$="-duration"]:checked');
+// //   if (selectEl && selectEl.value) {
+// //     duration = selectEl.value === 'fullday' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
+// //   } else if (radioEl && radioEl.value) {
+// //     duration = radioEl.value === 'full-day' ? 'Full Day (9 AM - 5 PM)' : '5 Hours';
+// //   }
+
+// // ✅ Build detailed section per shoot type
+// let shootDetails = "";
+
+// selectedShootTypes.forEach(type => {
+//   const lower = type.toLowerCase();
+
+//   // Check if requirement box is shown and get requirements text
+//   const reqBox = document.getElementById(`${lower}-requirements`);
+//   let reqText = "";
+//   if (reqBox && reqBox.style.display === "block") {
+//     const textarea = reqBox.querySelector("textarea");
+//     reqText = textarea ? textarea.value.trim() : "";
+//   }
+
+//   // Check for duration only for Fashion & Brand
+//   let durationText = "";
+//   if (["fashion", "brand"].includes(lower)) {
+//     const durationInput = document.querySelector(`input[name="${lower}-duration"]:checked`);
+//     if (durationInput) {
+//       durationText =
+//         durationInput.value === "full-day"
+//           ? "Full Day (9am-5pm)"
+//           : "5 Hours";
+//     }
+//   }
+
+//   // Append everything neatly for WhatsApp message
+//   shootDetails += `\n🎬 ${type} Shoot:`;
+//   if (durationText) shootDetails += `\n⌛ Duration: ${durationText}`;
+//   if (reqText) shootDetails += `\n📝 Requirements: ${reqText}`;
+//   shootDetails += "\n";
+// });
+
+
+// // // ✅ Collect durations for each shoot type separately
+// // let durationText = "";
+// // selectedShootTypes.forEach(type => {
+// //   if (["Fashion", "Brand"].includes(type)) {
+// //     const durationInput = document.querySelector(`input[name="${type.toLowerCase()}-duration"]:checked`);
+// //     if (durationInput) {
+// //       const duration =
+// //         durationInput.value === "full-day"
+// //           ? "Full Day (9am-5pm)"
+// //           : "5 Hours";
+// //       durationText += `\n⌛ ${type} Duration: ${duration}`;
+// //     }
+// //   }
+// // });
+
+// //   let specificRequirements = '';
+// //   selectedShootTypes.forEach(type => {
+// //     const reqBox = document.getElementById(`${type.toLowerCase()}-requirements`);
+// //     if (reqBox && reqBox.style.display === 'block') {
+// //       const reqText = reqBox.querySelector('textarea').value;
+// //       if (reqText) specificRequirements += `\n${type} Requirements: ${reqText}`;
+// //     }
+// //   });
+
+//   let clientHandle = 'Client';
+//   const savedUser = JSON.parse(
+//     localStorage.getItem('currentUser') || localStorage.getItem('currentUser ') || '{}'
+//   );
+//   if (savedUser.username) clientHandle = savedUser.username;
+//   else if (savedUser.instagram) clientHandle = savedUser.instagram;
+//   else if (savedUser.name) clientHandle = savedUser.name;
+
+//   const bookingDetails = `Model Booking Request:
+
+// 👩‍🎤 Model: ${model.name} (${category})
+// 📅 Date: ${date}
+// ⏰ Time: ${time}
+// ${shootDetails}
+// 📝 Gneral Notes: ${requirements}
+// Client: @${clientHandle}`;
+
+//   navigator.clipboard.writeText(bookingDetails).then(() => {
+//     alert('Booking details copied! Redirecting to Instagram...');
+//     window.open("https://www.instagram.com/hdmodels.co/", "_blank");
+//   }).catch(() => {
+//     alert('Please copy and send via Instagram DM:\n\n' + bookingDetails);
+//     window.open("https://www.instagram.com/hdmodels.co/", "_blank");
+//   });
+
+//   bookingManager.addBooking({
+//     clientInstagram: '@' + clientHandle,
+//     modelName: model.name,
+//     modelCategory: category,
+//     shootTypes: selectedShootTypes,
+//     shootDate: date,
+//     shootTime: time,
+//     duration: duration,
+//     requirements: requirements,
+//     specificRequirements: specificRequirements,
+//     platform: 'Instagram'
+//   });
+
+//   closeEnhancedModal();
+// }
 
 // Booking History Functions
 function initializeBookingHistory() {
@@ -2063,26 +2357,79 @@ function initializeBookingHistory() {
     }
 }
 
+
 function renderBookingHistory(bookings) {
     const bookingsList = document.getElementById('bookingsList');
-   bookingsList.innerHTML = bookings.map(booking => `
-  <div class="booking-item">
-    <pre class="booking-message">
-Model Booking Request:
+    if (!bookingsList) {
+        console.error("Bookings list container not found!");
+        return;
+    }
 
-👩‍🎤 Model: ${booking.modelName || 'N/A'} (${booking.modelCategory || 'N/A'})
-📅 Date: ${booking.shootDate || 'N/A'}
-⏰ Time: ${booking.shootTime || 'N/A'}
-⌛ Duration: ${booking.duration || 'N/A'}
-🎬 Shoot Type(s): ${Array.isArray(booking.shootTypes) ? booking.shootTypes.join(', ') : booking.shootTypes || 'N/A'}
-📝 Requirements: ${booking.requirements || 'N/A'}${booking.specificRequirements ? '\n' + booking.specificRequirements : ''}
+    if (bookings.length === 0) {
+        bookingsList.innerHTML = '<p>No bookings found for this user.</p>';
+        return;
+    }
 
-Client: ${booking.clientInstagram || 'N/A'}
-Platform: ${booking.platform || 'N/A'}
-    </pre>
-  </div>
-`).join('');
-   }
+    bookingsList.innerHTML = bookings.map(booking => {
+        // Prepare data for display
+        const modelName = booking.modelName || 'N/A';
+        const modelCategory = booking.modelCategory ? booking.modelCategory.charAt(0).toUpperCase() + booking.modelCategory.slice(1) : 'N/A';
+        const shootDate = booking.shootDate || 'N/A';
+        const shootTime = booking.shootTime || 'N/A';
+        const duration = booking.duration || 'N/A';
+        const shootTypes = Array.isArray(booking.shootTypes) ? booking.shootTypes.join(', ') : booking.shootTypes || 'N/A';
+        const requirements = booking.requirements && booking.requirements.trim() !== '' ? booking.requirements : 'None specified';
+        const specificRequirements = booking.specificRequirements && booking.specificRequirements.trim() !== '' ? booking.specificRequirements : 'None specified';
+        const clientInstagram = booking.clientInstagram || 'N/A';
+        const platform = booking.platform || 'N/A';
+        const status = booking.status ? booking.status.charAt(0).toUpperCase() + booking.status.slice(1) : 'Pending';
+        const bookingId = booking.id || 'N/A';
+        const createdAt = booking.createdAt ? new Date(booking.createdAt).toLocaleString() : 'N/A';
+
+
+        return `
+            <div class="booking-card">
+                <h3 class="booking-card-title">Booking ID: ${bookingId}</h3>
+                <p><strong>Status:</strong> <span class="booking-status booking-status-${status.toLowerCase()}">${status}</span></p>
+                <div class="booking-details">
+                    <p><strong>Model:</strong> ${modelName} (${modelCategory} Model)</p>
+                    <p><strong>Date & Time:</strong> ${shootDate} at ${shootTime}</p>
+                    <p><strong>Duration:</strong> ${duration}</p>
+                    <p><strong>Shoot Type(s):</strong> ${shootTypes}</p>
+                    <p><strong>Client:</strong> ${clientInstagram}</p>
+                    <p><strong>Booked via:</strong> ${platform}</p>
+                    <p><strong>General Requirements:</strong> ${requirements}</p>
+                    ${specificRequirements !== 'None specified' ? `<p><strong>Specific Requirements:</strong> ${specificRequirements}</p>` : ''}
+                    <p class="booking-timestamp">Booked on: ${createdAt}</p>
+                </div>
+                <!-- You can add action buttons here, e.g., to cancel or view details -->
+                <button class="booking-action-button" onclick="alert('Functionality to re-book or modify is not implemented yet.')">Re-Book / Modify</button>
+            </div>
+        `;
+    }).join('');
+}
+
+
+// function renderBookingHistory(bookings) {
+//     const bookingsList = document.getElementById('bookingsList');
+//    bookingsList.innerHTML = bookings.map(booking => `
+//   <div class="booking-item">
+//     <pre class="booking-message">
+// Model Booking Request:
+
+// 👩‍🎤 Model: ${booking.modelName || 'N/A'} (${booking.modelCategory || 'N/A'})
+// 📅 Date: ${booking.shootDate || 'N/A'}
+// ⏰ Time: ${booking.shootTime || 'N/A'}
+// ⌛ Duration: ${booking.duration || 'N/A'}
+// 🎬 Shoot Type(s): ${Array.isArray(booking.shootTypes) ? booking.shootTypes.join(', ') : booking.shootTypes || 'N/A'}
+// 📝 Requirements: ${booking.requirements || 'N/A'}${booking.specificRequirements ? '\n' + booking.specificRequirements : ''}
+
+// Client: ${booking.clientInstagram || 'N/A'}
+// Platform: ${booking.platform || 'N/A'}
+//     </pre>
+//   </div>
+// `).join('');
+//    }
 
 // Enhanced Booking Form Handler
 function enhanceBookingForm() {
@@ -2100,23 +2447,19 @@ function enhanceBookingForm() {
     }
 }
 
-// // Page Initialization
-// document.addEventListener('DOMContentLoaded', function() {
-//     const currentPage = window.location.pathname.split('/').pop();
-    
-//     if (currentPage === 'login.html') {
-//         const loginForm = document.getElementById('loginForm');
-//         if (loginForm) {
-//             loginForm.addEventListener('submit', handleLogin);
-//         }
-//     } else if (currentPage === 'booking-history.html') {
-//         initializeBookingHistory();
-//     } else if (currentPage.includes('model.html')) {
-//         initializeModelGallery();
-//     } else if (currentPage === 'bookings.html') {
-//         enhanceBookingForm();
-//     }
-// });
+// Specific initialization for booking-history.html
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if we are on the booking-history.html page
+    if (window.location.pathname.split('/').pop() === 'booking-history.html') {
+        initializeBookingHistory();
+    }
+
+    // --- Keep existing DOMContentLoaded listeners for other functionalities if they are outside this block ---
+    // (e.g., WhatsApp Integration, Cookie Management, Navigation active state, Smooth scrolling, Form input animations)
+    // If you had other general DOMContentLoaded listeners, they should remain.
+    // For example, if you have a separate DOMContentLoaded for cookie consent, keep it.
+});
+
 
 // Close modal when clicking outside
 document.addEventListener('DOMContentLoaded', function() {

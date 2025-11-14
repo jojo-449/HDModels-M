@@ -1,0 +1,383 @@
+/* Base Styles for Model Enquiry Page (extracted from original styles.css) */
+/* This ensures consistency without modifying the original styles.css */
+
+.models-page {
+    padding: 32px 0;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.page-subtitle { /* Added a class for the paragraph below the title */
+    text-align: center;
+    color: #666;
+    margin-top: 16px;
+}
+
+.terms-box {
+    max-width: 1024px;
+    margin: 0 auto 32px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 32px;
+    margin-left: 16px; /* Original margin-left */
+    margin-right: 16px; /* Original margin-right */
+    text-align: left;
+}
+
+.form-section-title { /* Renamed h3 in terms-box for application form */
+    text-align: center;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.form-section { /* Wrapper for sections like Personal Info, Measurements */
+    margin-bottom: 32px;
+}
+
+.form-sub-section-title { /* Renamed h4 for sub-sections */
+    color: #be185d;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #be185d;
+    padding-bottom: 8px;
+}
+
+.form-grid { /* For Personal Info, Experience, etc. */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.form-grid-measurements { /* Specific grid for Physical Measurements */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.form-group {
+    margin-bottom: 24px; /* Default margin from original styles */
+}
+
+.form-label {
+    display: block;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(190, 24, 93, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+
+.phone-input-container {
+    position: relative;
+}
+
+.phone-prefix {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.phone-input {
+    padding-left: 32px;
+}
+
+.submit-button {
+    width: 100%; /* Default width */
+    max-width: 300px; /* Limit max width for a nicer button look */
+    display: block; /* Make it a block element to center with margin auto */
+    margin: 0 auto; /* Center the button */
+    background: #be185d;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #9d174d;
+}
+
+/* Requirements Section Specific Styles */
+.requirements-box-section { /* Renamed terms-box for requirements section */
+    margin-top: 32px;
+    margin-left: 110px; /* Original margin-left */
+    margin-right: 16px; /* Ensure it takes full width with padding */
+}
+
+.requirements-section-title { /* Renamed h3 for requirements title */
+    text-align: center;
+    margin-bottom: 24px;
+    color: #be185d;
+}
+
+.requirements-grid { /* Wrapper for the requirements columns */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.requirement-item {
+    /* Styles for each individual requirement block */
+}
+
+.requirement-sub-title { /* Renamed h4 for individual requirement titles */
+    color: #be185d;
+    margin-bottom: 12px;
+}
+
+.requirement-list { /* Renamed ul for requirement list */
+    margin-left: 20px;
+    line-height: 1.6;
+    list-style: disc; /* Added disc for actual list style */
+}
+
+.requirement-list li {
+    margin-bottom: 8px; /* Add some spacing between list items */
+}
+
+
+/* --- Model Enquiry Page Responsiveness --- */
+
+/* Adjusting the main container's fixed margins for better responsiveness */
+@media (min-width: 1025px) {
+    .All {
+        display: flex; /* Use flex to align children for specific desktop layout */
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center them horizontally */
+        width: 100%;
+        padding: 0 20px; /* Add some side padding */
+    }
+
+    .terms-box {
+        max-width: 1024px; /* Ensure main width is consistent */
+        width: 100%;
+        margin-left: auto !important; /* Override inline style */
+        margin-right: auto !important; /* Override inline style */
+    }
+
+    .terms-box:first-of-type { /* Target application form terms-box */
+        margin-bottom: 32px;
+    }
+
+    .requirements-box-section { /* Target requirements terms-box */
+        margin-top: 32px;
+        margin-bottom: 32px;
+        margin-left: auto !important; /* Override inline style */
+        margin-right: auto !important; /* Override inline style */
+    }
+}
+
+
+@media (max-width: 1024px) {
+    /* Adjusting the main content wrapper */
+    .All {
+        margin-left: 0 !important; /* Remove fixed margin */
+        padding: 0 20px; /* Add padding for smaller screens */
+    }
+
+    /* Adjusting the individual terms-box components */
+    .terms-box {
+        margin-left: 0 !important; /* Remove fixed margin for forms and requirements */
+        margin-right: 0 !important; /* Ensure full width with padding */
+        padding: 25px; /* Slightly less padding */
+    }
+
+    /* Specific to the requirements section's terms-box */
+    .requirements-box-section {
+        margin-left: 0 !important; /* Remove fixed margin */
+    }
+
+    /* Form headings adjustments */
+    .form-section-title, .requirements-section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .form-sub-section-title, .requirement-sub-title {
+        font-size: 1.1rem;
+        margin-bottom: 14px;
+        padding-bottom: 7px;
+    }
+
+    /* Form grid adjustments */
+    .form-grid, .form-grid-measurements, .requirements-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Allow items to stack if not enough space */
+        gap: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .submit-button {
+        max-width: 250px; /* Adjust max width for button */
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .requirement-list {
+        margin-left: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    .page-subtitle {
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+    .All {
+        padding: 0 15px; /* Tighter padding on smaller screens */
+        background-color:#f994db ;
+    }
+
+    .terms-box {
+        padding: 20px; /* Further reduce padding inside boxes */
+        margin-bottom: 25px; /* Adjust spacing between boxes */
+    }
+
+    .form-section-title, .requirements-section-title {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .form-sub-section-title, .requirement-sub-title {
+        font-size: 1rem;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+    }
+
+    /* Stack form fields vertically */
+    .form-grid, .form-grid-measurements {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-label {
+        font-size: 0.8rem;
+        margin-bottom: 6px;
+    }
+
+    .form-input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .phone-prefix {
+        font-size: 0.8rem;
+    }
+
+    /* Stack requirements vertically */
+    .requirements-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .requirement-list {
+        margin-left: 12px;
+        font-size: 0.85rem;
+    }
+
+    .submit-button {
+        max-width: 220px; /* Smaller button */
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .models-page {
+        padding: 20px 0;
+    }
+
+    .page-title {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .page-subtitle {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .All {
+        padding: 0 10px; /* Even tighter padding */
+    }
+
+    .terms-box {
+        padding: 15px;
+        border-radius: 18px; /* Slightly smaller border radius */
+        margin-bottom: 20px;
+    }
+
+    .form-section-title, .requirements-section-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .form-sub-section-title, .requirement-sub-title {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-input {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .phone-prefix {
+        font-size: 0.75rem;
+    }
+
+    .requirement-list {
+        margin-left: 10px;
+        font-size: 0.8rem;
+    }
+
+    .submit-button {
+        max-width: 180px; /* Smallest button size */
+        padding: 7px 14px;
+        font-size: 13px;
+        border-radius: 40px;
+    }
+}

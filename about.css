@@ -1,0 +1,326 @@
+/* Base rules for responsiveness */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Important for preventing horizontal scroll */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #8d4918 100%);
+    background-attachment: fixed; /* Override to fixed on desktop/larger screens */
+     
+    min-height: 100vh;
+    color: #333;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+/* About Page Styles */
+.models-page {
+    padding: 32px 0;
+    background-color: #f994db;
+}
+
+.All{
+    background-color:#f994db ;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 16px;
+    /* Adjust for responsiveness */
+    transform: none !important; /* Reset specific inline style */
+}
+
+.terms-box {
+    max-width: 1024px;
+    margin: 0 auto 32px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 32px;
+  
+    text-align: left;
+}
+
+.terms-box p {
+    text-align: left; /* Changed from center for readability */
+    margin-bottom: 16px;
+    color: #000;
+    line-height: 1.6;
+}
+
+.terms-box strong {
+    font-weight: bold;
+}
+
+/* Specific styles for About Us sections */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.about-grid h3 {
+    color: #be185d;
+    margin-bottom: 16px;
+}
+
+.about-grid h2 {
+    color: #d79eb6;
+    font-size: large;
+    /* Adjust for responsiveness */
+    transform: none !important; /* Reset specific inline style */
+    margin-bottom: 16px;
+}
+
+.about-grid blockquote {
+    /* Adjust for responsiveness */
+    transform: none !important; /* Reset specific inline style */
+    margin-top: 20px;
+    margin-left: 0;
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #be185d;
+    padding-left: 15px;
+}
+
+.about-stats {
+    margin-top: 15px;
+    /* Adjust for responsiveness */
+    transform: none !important; /* Reset specific inline style */
+}
+
+.about-stats li {
+    list-style: none;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 12px;
+}
+
+.service-item h4 {
+    color: #be185d;
+    margin-bottom: 12px;
+}
+
+.service-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: center; /* Ensure service item paragraphs are centered */
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.why-choose-item {
+    padding: 16px;
+    border-left: 4px solid #be185d;
+}
+
+.why-choose-item h4 {
+    color: #be185d;
+    margin-bottom: 8px;
+    /* Adjust for responsiveness */
+    transform: none !important; /* Reset specific inline style */
+}
+
+.why-choose-item p {
+    font-size: 0.9rem;
+    text-align: left; /* Ensure why choose item paragraphs are left-aligned */
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-buttons a {
+    background: #be185d;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.contact-buttons a:hover {
+    background: #9d174d;
+}
+
+.contact-buttons a[href*="whatsapp"] {
+    background: #25d366;
+}
+.contact-buttons a[href*="whatsapp"]:hover {
+    background: #128c7e;
+}
+
+.contact-buttons a[href*="model-enquiry"] {
+    background: #5a0e4f;
+}
+.contact-buttons a[href*="model-enquiry"]:hover {
+    background: #3e0a35;
+}
+
+
+
+
+ 
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+    .nav-links {
+        gap: 30px;
+    }
+    .about-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+        justify-content: center;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+    .nav-link {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+    .nav-icons {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        gap: 10px;
+    }
+
+    /* About Page */
+    .All {
+       
+  background-color: #f994db;
+  max-width: 1200px;      /* Optional - keeps it from stretching too wide */
+  margin: 0 auto;         /* Centers it horizontally */
+  padding: 0 16px;        /* Optional - adds side padding */
+
+
+        background-color: #f994db;
+    }
+    .page-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .terms-box {
+        padding: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .about-grid {
+        grid-template-columns: 1fr; /* Stack columns */
+        gap: 25px;
+    }
+    .about-grid h2 {
+        font-size: medium;
+    }
+    .about-grid blockquote {
+        margin-top: 15px;
+        padding-left: 10px;
+    }
+    .services-grid, .why-choose-grid {
+        grid-template-columns: 1fr; /* Stack services and why choose items */
+        gap: 15px;
+    }
+    .service-item, .why-choose-item {
+        padding: 15px;
+    }
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .contact-buttons a {
+        width: 80%;
+        max-width: 250px;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+    .nav-icons {
+        font-size: 18px;
+        right: 10px;
+    }
+    .page-title {
+        font-size: 1.8rem;
+    }
+    .terms-box {
+        padding: 20px;
+    }
+    .about-grid h2 {
+        font-size: small;
+    }
+    .about-grid p, .about-stats li, .service-item p, .why-choose-item p {
+        font-size: 0.85rem;
+    }
+    .contact-buttons a {
+        width: 90%;
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+}
+
+
+
+/* Base rules for responsiveness */
+html, body {
+  background-color: transparent !important;
+  overflow-x: hidden; /* Important for preventing horizontal scroll */
+  background-attachment: fixed; /* Override to fixed on desktop/larger screens */
+}

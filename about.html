@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - HDMODELS</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css"> <!-- Link to your new about.css -->
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -14,62 +15,42 @@
                 <a href="index.html" class="nav-link">HOME-PAGE</a>
                 <a href="models.html" class="nav-link">MODEL</a>
                 <a href="booking-history.html" class="nav-link">BOOKINGS</a>
-                <a href="about.html" class="nav-link active">ABOUT US</a>
+                <a href="index.html#about.html" class="nav-link active">ABOUT US</a>
                 <a href="model-enquiry.html" class="nav-link">MODEL ENQUIRY</a>
                 <a href="terms.html" class="nav-link">TERMS & CONDITIONS</a>
             </div>
-            <div class="nav-icons">
-                <a href="lout.html">
-                <a href="lout.html" class="nav-icon">👤</a>
-                
-            </div>
+           
         </div>
     </nav>
 
-    <div class="All" style="margin-left: 100px;">
+    <div class="All"> <!-- Removed inline style to allow CSS to control margin -->
     <!-- About Us Content -->
     <div class="models-page">
         <div class="page-header">
-            <h1 class="page-title" style="transform: translateX(-40px);">About HDMODELS</h1>
+            <h1 class="page-title">About HDMODELS</h1> <!-- Removed inline style -->
         </div>
 
         <!-- About Us Section -->
         <div class="terms-box">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 24px;">
+            <div class="about-grid"> <!-- Added a class for targeted styling -->
                 <div>
-
-                 
-
-                    <h3 style="color: #be185d; margin-bottom: 16px;">Our Story</h3>
-                    <h2 style="color: #d79eb6; transform: translateX(50px); font-size: large;">Built to Elevate. Inspired to Empower.</h2>
-                    <p style="margin-bottom: 16px; line-height: 1.6;">HDMODELS is a premier fashion modeling agency dedicated to connecting talented models with top brands, photographers, and creative professionals. Founded with a vision to redefine beauty standards and promote diversity in the fashion industry.
-                    </p>
-  <p>Founded in Lagos in 2019, Honeydrop Beauty League is Nigeria’s premier platform for discovering, nurturing, and celebrating the next generation of beauty and fashion talent. From high-profile fashion campaigns to digital influencer marketing, we help young creatives launch careers that captivate the world.</p>
-  <blockquote style="transform: translateY(-20px) translateX(70px);">“We don’t just model beauty. We shape it.”</blockquote>
-
-  <p>Empowering a new generation of models and influencers since 2019
- 
-  <div style="transform: translateY(-15px) translateX(130px);">
-     <li>💼 2,000+ Clients Served</li>
-    <li>🎓 500+ Talents Trained </li>
-    <li>🌍 Campaigns in 10+ Cities</li>
-                   
-  </div>
-    
-                       
-  
-        
-                    <!-- <p style="margin-bottom: 16px; line-height: 1.6;">
-                        We specialize in providing professional models for various shoots including fashion, beauty, bridal, commercial, and lifestyle photography. Our agency prides itself on maintaining the highest standards of professionalism and excellence.
-                    </p> -->
+                    <h3>Our Story</h3>
+                    <h2>Built to Elevate. Inspired to Empower.</h2> <!-- Removed inline style -->
+                    <p>HDMODELS is a premier fashion modeling agency dedicated to connecting talented models with top brands, photographers, and creative professionals. Founded with a vision to redefine beauty standards and promote diversity in the fashion industry.</p>
+                    <p>Founded in Lagos in 2019, Honeydrop Beauty League is Nigeria’s premier platform for discovering, nurturing, and celebrating the next generation of beauty and fashion talent. From high-profile fashion campaigns to digital influencer marketing, we help young creatives launch careers that captivate the world.</p>
+                    <blockquote>“We don’t just model beauty. We shape it.”</blockquote> <!-- Removed inline style -->
+                    <p>Empowering a new generation of models and influencers since 2019</p>
+                    <div class="about-stats"> <!-- Added a class for targeted styling -->
+                        <li>💼 2,000+ Clients Served</li>
+                        <li>🎓 500+ Talents Trained </li>
+                        <li>🌍 Campaigns in 10+ Cities</li>
+                    </div>
                 </div>
                 <div>
-                    <h3 style="color: #be185d; margin-bottom: 16px;">Our Mission</h3>
-                    <p style="margin-bottom: 16px; line-height: 1.6;">
-                        To bridge the gap between exceptional talent and creative opportunities while maintaining ethical practices and fostering a supportive environment for all our models.
-                    </p>
-                    <h3 style="color: #be185d; margin-bottom: 16px; margin-top: 24px;">What We Offer</h3>
-                    <ul style="margin-left: 20px; line-height: 1.8;">
+                    <h3>Our Mission</h3>
+                    <p>To bridge the gap between exceptional talent and creative opportunities while maintaining ethical practices and fostering a supportive environment for all our models.</p>
+                    <h3 style="margin-top: 24px;">What We Offer</h3> <!-- Kept margin-top for spacing -->
+                    <ul style="margin-left: 20px; line-height: 1.8;"> <!-- Kept inline style for specific list formatting -->
                         <li>Runway Models|Poised for catwalks & fashion week brilliance|.</li>
                         <li>Editorial Faces|Perfect for magazines,lookbooks,&campaigns|.</li>
                         <li>Brand Ambassadors</li>
@@ -82,75 +63,66 @@
         </div>
 
         <!-- Services Section -->
-        <div class="terms-box" style="margin-top: 32px;">
+        <div class="terms-box" style="margin-top: 32px;"> <!-- Kept margin-top for consistent spacing -->
             <h3 style="text-align: center; margin-bottom: 24px; color: #be185d;">Our Services</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.3); border-radius: 12px;">
-                    <h4 style="color: #be185d; margin-bottom: 12px;">Fashion Photography</h4>
-                    <p style="font-size: 0.9rem; line-height: 1.5;">
-                        High-end fashion shoots with professional models for brands, magazines, and designers.
-                    </p>
+            <div class="services-grid"> <!-- Added a class for targeted styling -->
+                <div class="service-item">
+                    <h4>Fashion Photography</h4>
+                    <p>High-end fashion shoots with professional models for brands, magazines, and designers.</p>
                 </div>
-                <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.3); border-radius: 12px;">
-                    <h4 style="color: #be185d; margin-bottom: 12px;">Beauty & Skincare</h4>
-                    <p style="font-size: 0.9rem; line-height: 1.5;">
-                        Specialized beauty shoots showcasing cosmetics, skincare products, and treatments.
-                    </p>
+                <div class="service-item">
+                    <h4>Beauty & Skincare</h4>
+                    <p>Specialized beauty shoots showcasing cosmetics, skincare products, and treatments.</p>
                 </div>
-                <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.3); border-radius: 12px;">
-                    <h4 style="color: #be185d; margin-bottom: 12px;">Bridal Shoots</h4>
-                    <p style="font-size: 0.9rem; line-height: 1.5;">
-                        Elegant bridal models featuring wedding gowns, accessories, and bridal beauty.
-                    </p>
+                <div class="service-item">
+                    <h4>Bridal Shoots</h4>
+                    <p>Elegant bridal models featuring wedding gowns, accessories, and bridal beauty.</p>
                 </div>
-                <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.3); border-radius: 12px;">
-                    <h4 style="color: #be185d; margin-bottom: 12px;">Commercial Campaigns</h4>
-                    <p style="font-size: 0.9rem; line-height: 1.5;">
-                        Professional models for advertising campaigns, product launches, and brand promotions.
-                    </p>
+                <div class="service-item">
+                    <h4>Commercial Campaigns</h4>
+                    <p>Professional models for advertising campaigns, product launches, and brand promotions.</p>
                 </div>
             </div>
         </div>
 
         <!-- Why Choose Us Section -->
-        <div class="terms-box" style="margin-top: 32px;">
+        <div class="terms-box" style="margin-top: 32px;"> <!-- Kept margin-top for consistent spacing -->
             <h3 style="text-align: center; margin-bottom: 24px; color: #be185d;">Why Choose HDMODELS?</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-                <div style="padding: 16px; border-left: 4px solid #be185d;">
-                    <h4 style="color: #be185d; margin-bottom: 8px;">Professional Excellence</h4>
-                    <p style="font-size: 0.9rem;">Proven results,curated talent,real impact and creative execution</p>
+            <div class="why-choose-grid"> <!-- Added a class for targeted styling -->
+                <div class="why-choose-item">
+                    <h4>Professional Excellence</h4> <!-- Removed inline style -->
+                    <p>Proven results,curated talent,real impact and creative execution</p>
                 </div>
-                <div style="padding: 16px; border-left: 4px solid #be185d;">
-                    <h4 style="color: #be185d; margin-bottom: 8px; transform: translateX(30px);">Diverse Portfolio</h4>
-                    <p style="font-size: 0.9rem;">Wide range of models for every type of shoot and brand</p>
+                <div class="why-choose-item">
+                    <h4>Diverse Portfolio</h4> <!-- Removed inline style -->
+                    <p>Wide range of models for every type of shoot and brand</p>
                 </div>
-                <div style="padding: 16px; border-left: 4px solid #be185d;">
-                    <h4 style="color: #be185d; margin-bottom: 8px; transform: translateX(30px);">Quick Response</h4>
-                    <p style="font-size: 0.9rem;">Fast booking process with instant WhatsApp and Instagram communication</p>
+                <div class="why-choose-item">
+                    <h4>Quick Response</h4> <!-- Removed inline style -->
+                    <p>Fast booking process with instant WhatsApp and Instagram communication</p>
                 </div>
-                <div style="padding: 16px; border-left: 4px solid #be185d;">
-                    <h4 style="color: #be185d; margin-bottom: 8px; transform: translateX(35px);">Collaborations</h4>
-                    <p style="font-size: 0.9rem;">Patnered with Nigeria's top influencers and models</p>
+                <div class="why-choose-item">
+                    <h4>Collaborations</h4> <!-- Removed inline style -->
+                    <p>Patnered with Nigeria's top influencers and models</p>
                 </div>
             </div>
         </div>
 
         <!-- Contact Information -->
-        <div class="terms-box" style="margin-top: 32px;">
+        <div class="terms-box" style="margin-top: 32px;"> <!-- Kept margin-top for consistent spacing -->
             <h3 style="text-align: center; margin-bottom: 24px; color: #be185d;">Get In Touch</h3>
             <div style="text-align: center;">
                 <p style="margin-bottom: 16px; font-size: 1.1rem;">
                     Ready to become one of our gorgeous models OR book our professional models for your next project?
                 </p>
-                <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 20px;">
-                    <a href="models.html" style="background: #be185d; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+                <div class="contact-buttons"> <!-- Added a class for targeted styling -->
+                    <a href="models.html">
                         📅 Book Models
                     </a>
-                    <a href="https://wa.me/2348146518310" target="_blank" style="background: #25d366; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+                    <a href="https://wa.me/2348146518310" target="_blank">
                         💬 WhatsApp Us
                     </a>
-
-                     <a href="model-enquiry.html" target="_blank" style="background: #5a0e4f; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+                    <a href="model-enquiry.html" target="_blank">
                         🎀 Apply
                     </a>
                 </div>
@@ -159,7 +131,12 @@
     </div>
     </div>
    
+
+
+
+
     <script src="auth.js"></script>
-     <script src="script (1).js"></script>
+    <script src="script (1).js"></script>
+    <script src="about.js"></script>
 </body>
 </html>
